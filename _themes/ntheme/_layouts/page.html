@@ -1,0 +1,19 @@
+{% include temp-top.html %}
+    <!-- page.html -->
+    <main class="page-content" aria-label="Content">
+      {% if page.layout != "frontpage" %}
+      <div class="wrapper">
+      {% endif %}
+        
+        {% if page.layout != "frontpage" and page.layout != "post"  %}
+          {% include page-title.html %}
+        {% endif %}
+        
+        {{ content }}
+        
+      {% if page.layout != "frontpage" %}
+      </div><!-- .wrapper -->
+      {% endif %}
+    </main><!-- .page-content -->
+    <!-- END page.html -->
+{% include temp-bottom.html %}

@@ -1,0 +1,41 @@
+defaults:
+  -
+    scope:
+      path: ""        # empty string for all files
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: 
+      title_in_home: "Ipset lorem "
+      author: "Mr. Jack"
+      featured: no
+      featured_img:  
+      categories: ""
+      summary: ""
+      keywords: ""
+      seo:
+        title:
+        description: ""
+        keywords: ""
+  -
+    scope:
+      path: ""        # empty string for all files
+      type: "pages"
+    values:
+      layout: "page"
+      summary: ""
+      keywords: ""
+      add_to_top_menu: "yes"
+      add_to_bottom_menu: "yes"
+      sitemap:
+        exclude: no
+  -        
+    scope:
+      path: "frontpage.html"        # empty string for all files
+      type: "pages"
+    values:
+      layout: "frontpage"
+      section:
+        blackquote: 
+        cite: 
+        link:    

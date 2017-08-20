@@ -1,0 +1,42 @@
+{% if blog %}
+<div class="featured-posts">
+  {% assign featured = true %}
+  {% for post in site.posts %}
+      {% if post.featured %}
+          {% include posts.html %}
+    {% endif %}
+  {% endfor %} 
+</div>
+{% endif %}
+
+<div class="posts-index" itemscope itemtype="http://schema.org/BlogPosting">  
+  <!-- 
+    
+  {% for post in site.posts %}
+      {% if post.featured %}
+          {% include posts.html %}
+    {% endif %}
+  {% endfor %}      
+  -->
+  {% assign featured = false %}
+  {% if frontpage %}
+    {% for post in site.posts limit: 4 %}
+      {% include posts.html %}
+    {% endfor %}
+  {% else %}
+    {% for post in site.posts %}
+      {% include posts.html %}
+    {% endfor %}  
+  {% endif %}
+  
+
+
+  
+  
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ " feed.xml"="" |="" prepend:="" site.baseurl="" }}"="">via RSS</a></p>-->
+        
+</div> <!-- .home .blog .posts-index -->  
+
+{% if frontpage  %}
+<div class="btn"><a href="/blog">All article</a> </div>
+{% endif %}

@@ -1,0 +1,29 @@
+---
+layout: page
+---
+        {% assign frontpage = true %}
+        
+        <!-- frontpage.html --> 
+        {% if page.section.blackquote %}
+        <section class="frontpage-section">
+                <div class="fps-wrap">
+                        <blockquote>
+                                <p>{{ page.section.blackquote }}</p>
+                                {% if page.section.cite %}
+                                <footer>— <cite>{% if page.section.link %}<a href="{{ page.section.link | escape }}">{% endif %}{{ page.section.cite }}{% if page.section.link %}</a>{% endif %}</cite></footer>
+                                {% endif %}
+                        </blockquote>
+                </div>
+        </section>
+        {% endif %}
+        
+        <div class="wrapper">
+        
+                {{ content }}
+        
+                <h2>Latest posts</h2>
+        
+                {% include loop-blog.html %}
+                
+        </div>
+        <!-- END frontpage.html --> 

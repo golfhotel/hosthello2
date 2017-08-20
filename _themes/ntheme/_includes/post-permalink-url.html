@@ -1,0 +1,3 @@
+{% if post.permalink %}{{ post.permalink | prepend: site.baseurl }} 
+  {% else %}{{ post.url | prepend: site.baseurl }} 
+{% endif %}
