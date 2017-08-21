@@ -1,3 +1,7 @@
+{% if jekyll.environment == "production" %}
+  {% assign url = site.url %}
+{% endif %}
+  
   <article {% if featured %} class="featured" {% endif %} >
     <header>
       <a href="{% include post-permalink-url.html %}"><img src="{% include post-image.html %}" ></a>
@@ -9,6 +13,6 @@
         <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"><b>{{ post.date | date: "%b %-d, %Y" }}</b> - </time>
         {{ post.summary | default: post.content | strip_html | normalize_whitespace | truncate: 86 | escape }}
       </p>
-      <div class="read-more"><a class="tooltip" href="{{ post.url | prepend: site.baseurl }}" title="Read more" >More</a></div>
+      <div class="read-more"><a class="tooltip" href="{{ post.url | prepend: url }}" title="Read more" >More</a></div>
     </header>
   </article>
