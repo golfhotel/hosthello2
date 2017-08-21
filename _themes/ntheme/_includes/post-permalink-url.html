@@ -2,6 +2,8 @@
   {% assign url = site.url %}
 {% endif %}
 
-{% if post.permalink %}{{ post.permalink | prepend: url }} 
-  {% else %}{{ post.url | prepend: url }} 
+{% if post.permalink %}
+	{{ post.permalink | prepend: url }} 
+{% else %}
+	{{ post.url | prepend: url }} 
 {% endif %}
