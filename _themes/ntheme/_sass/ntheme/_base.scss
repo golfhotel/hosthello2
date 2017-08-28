@@ -125,7 +125,114 @@ a {
     }
 }
 
+.logo{ 
 
+    a {
+        color: #ffffff;
+        display: block;
+        padding-bottom: .6rem;
+        padding-top: .6rem;
+        width: 7em;
+
+        img{ 
+            width: 100%;
+        }            
+    }
+
+}
+
+.isFrontpage {
+
+    .site-header{
+
+        &::before{
+            content: "";
+            background-color: #00a2db;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; 
+        }
+
+        &::after {
+            background-image: url("https://images.unsplash.com/photo-1484542603127-984f4f7d14cb?dpr=1&auto=format&fit=crop&w=1500&h=902&q=80&cs=tinysrgb&crop=");
+            background-position: center;
+            background-size: cover;
+            bottom: 0;
+            content: "";
+            left: 0;
+            opacity: 0.2;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;   
+        }        
+        
+        .wrapper-logo{
+            
+            &:after{
+                -ms-transform: rotate(90deg) scale(1,2); /* IE 9 */
+                -webkit-transform: rotate(90deg) scale(1,2); /* Chrome, Safari, Opera */
+                bottom: -.62em;
+                color: #59d3fe;
+                content:"›";
+                font-size: 3em;
+                position: fixed;
+                transform: rotate(90deg) scale(1,2);                
+                z-index: -1;
+                
+                @include media-query(768px){
+                    font-size: 5em;
+                }
+                
+            }            
+            
+            .logo {
+                
+                a {
+                    width: 11em;
+
+                    @include media-query(768px) {
+                        width: 22.5em;    
+                    }
+                }        
+            }
+
+
+        }    
+    }//site.header
+
+
+    /* Manage menù input beaviour in isFrontpage page  */
+    input[id=show-menu]:checked ~ .site-header > .wrapper-logo > .logo {
+        
+        a {
+            width: 7em;
+        }
+    }
+
+}
+
+/**
+ * Manage menù input beaviour in other page 
+ */
+
+/*Hide checkbox*/
+input[id=show-menu]{
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+input[id=show-menu]:checked ~ .site-header > .wrapper-logo > #menu > ul{
+    
+    display: block;
+    /* 
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    */
+}
 
 /**
  * Blockquotes
@@ -148,7 +255,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
 
 
 /**
@@ -178,62 +284,6 @@ pre {
 }
 
 
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-right: 5%;
-    padding-left: 5%;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    }
-}
-
-.wrapper-logo{
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    
-    @include media-query($on-laptop){
-        position: relative;
-        max-width: $content-width;
-    }
-}
-/**
- * Frontpage
-*/
-.isFrontpage{
-    
-    .wrapper-logo{
-        display:flex;
-        align-items: center;        
-        height: 100%;
-        justify-content: center;
-        -webkit-justify-content: center;
-        flex-direction: column;
-    } 
-}
-
-
-.frontpage-title{
-    position: absolute;
-    bottom: 2em;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-
 /**
  * Clearfix
  */
@@ -242,7 +292,6 @@ pre {
     display: table;
     clear: both;
 }
-
 
 
 /**
@@ -263,7 +312,6 @@ pre {
 /**
  * hr
 */
-
 hr {
     background: #eee;
     border: 0;

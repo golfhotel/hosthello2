@@ -2,6 +2,15 @@
   {% assign url = site.url %}
 {% endif %}
 
+<label for="show-menu" class="show-menu">
+  <svg viewBox="0 0 18 15">
+    <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+    <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+    <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+  </svg>
+</label>
+<input type="checkbox" id="show-menu" role="button">
+
 <header class="site-header" role="banner">
 
   <div class="wrapper-logo">
@@ -12,28 +21,25 @@
       </a><!-- .site-title -->
     </div><!-- .logo -->
     
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a><!-- .menu-icon -->
 
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.add_to_top_menu and my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: url }}">
-            {% if my_page.name_in_menu %} {{ my_page.name_in_menu }} 
-            {% else %}{{ my_page.title | escape }} 
+    <nav id="menu">
+        <ul>
+          {% for my_page in site.pages %}
+            {% if my_page.add_to_top_menu and my_page.title %}
+            <li>
+              <a  href="{{ my_page.url | prepend: url }}">
+                {% if my_page.name_in_menu %} {{ my_page.name_in_menu }} 
+                {% else %}{{ my_page.title | escape }} 
+                {% endif %}
+              </a>
+            </li>
             {% endif %}
-          </a>
-          {% endif %}
-        {% endfor %}   
-      </div><!-- .trigger-->
-    </nav><!-- site-nav -->
-    
+          {% endfor %}
+        </ul>
+    </nav>
+
+
+
     {% if page.layout == 'frontpage' %}
     <div class="frontpage-title">
       <h1 class="page-title">{{ page.title | escape }}</h1>
@@ -44,3 +50,20 @@
   </div><!-- .wrapper-logo -->
 
 </header><!-- .site-header -->
+
+{% if jekyll.environment != "production" %}
+<div style="
+    background: yellow;
+    font-family: arial;
+    font-size: .7em;
+    font-weight: bold;
+    padding-bottom: .6em;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: .6em; 
+    text-align: center;
+    text-transform: uppercase;
+    width: 90%; 
+    ">
+    Enviroment: <a href="https://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time" target="_blank">{{ jekyll.environment }}</a></div>
+{% endif %}

@@ -19,7 +19,7 @@ email: info@hosthello.com
 description: > # this means to ignore newlines until "baseurl:"
   Hosthello sviluppa progetti web con le tecnologie più recenti.
 
-url: "//golfhotel.github.io/hosthello" # the base hostname & protocol for your site
+url: "https://golfhotel.github.io/hosthello" # the base hostname & protocol for your site
                                        # considerata se si usa il comando 'JEKYLL_ENV=production jekyll build'
 baseurl: ""                            # the subpath of your site, e.g. /blog
 
@@ -72,10 +72,11 @@ defaults:
       layout: "page"
       summary: ""
       keywords: ""
-      add_to_top_menu: "yes"
-      add_to_bottom_menu: "yes"
+      add_to_top_menu: yes
+      add_to_bottom_menu: yes
       sitemap:
         exclude: no
+      latest_posts: no
   -        
     scope:
       path: "frontpage.html"        # empty string for all files

@@ -1,9 +1,13 @@
 <footer class="site-footer">
 
   <div class="wrapper">
+  
+    <div class="logo">
+      <a class="site-title" href="{{ url }}/">
+        <img src="{{ site.logoimg }}" class="portrait" alt="{{ site.logoimg_alt }}">
+      </a><!-- .site-title -->
+    </div><!-- .logo -->
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-    
     <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.add_to_bottom_menu && my_page.title %}

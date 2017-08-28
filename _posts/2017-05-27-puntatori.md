@@ -4,7 +4,7 @@ title:  Puntatori
 date:   2017-05-27
 categories: linguaggio c
 summary: Nozioni sui puntatori.
-featured: yes
+featured: no
 ---
 
 # Puntatori

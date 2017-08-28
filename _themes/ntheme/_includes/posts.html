@@ -1,8 +1,14 @@
 {% if jekyll.environment == "production" %}
   {% assign url = site.url %}
 {% endif %}
+
+{% if post.featured %} 
+  {% assign foobarbaz = "featured" %}
+{% else %}
+  {% assign foobarbaz = " " %}
+{% endif %}
   
-  <article {% if featured %} class="featured" {% endif %} >
+  <article class="{{ foobarbaz }}" >
     <header>
       <a href="{% include post-permalink-url.html %}"><img src="{% include post-image.html %}" ></a>
       

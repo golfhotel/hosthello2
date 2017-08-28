@@ -20,10 +20,10 @@ layout: page
         <div class="wrapper">
         
                 {{ content }}
-        
-                <h2>Latest posts</h2>
-        
-                {% include loop-blog.html %}
                 
+                {% if page.latest_posts %}
+                        <h2>Latest posts</h2>
+                        {% include loop-blog.html %}
+                {% endif %}        
         </div>
         <!-- END frontpage.html --> 

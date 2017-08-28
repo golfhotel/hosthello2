@@ -3,14 +3,19 @@
     <main class="page-content" aria-label="Content">
       {% if page.layout != "frontpage" %}
       <div class="wrapper">
-      {% endif %}
+      {% endif %}       
         
         {% if page.layout != "frontpage" and page.layout != "post"  %}
           {% include page-title.html %}
         {% endif %}
         
         {{ content }}
-        
+
+        {% if page.latest_posts and page.layout != "frontpage" %}
+          <h2>Latest posts</h2>
+          {% include loop-blog.html %}
+        {% endif %}
+
       {% if page.layout != "frontpage" %}
       </div><!-- .wrapper -->
       {% endif %}
