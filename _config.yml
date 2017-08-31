@@ -45,7 +45,7 @@ logoimg: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwM
 logoimg_alt: Hosthello logo
 
 ## immagine default usata nei post
-post_featured_img_default: https://avatars3.githubusercontent.com/u/3083652?v=3&s=400
+post_featured_img_default: assets/gh-img.png
 
 ## configurazioni generiche
 defaults:
