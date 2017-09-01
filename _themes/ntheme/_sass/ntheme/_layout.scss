@@ -33,6 +33,7 @@
             
             @include media-query($on-laptop){
                 margin-left: 0;
+                float: left;
             }                    
         }
     }
@@ -69,66 +70,106 @@
 
 /*Style for menu links*/
 #menu {
-    /*Strip the ul of padding and list styling*/    
-    > ul {
-        background: #f9f9f9;
-        display: none;
-        height: 100%;
-        left: 0;
-        list-style-type:none;
-        margin:0;
-        overflow: hidden;
-        padding-right: 5%;
-        padding-left: 10%;
-        padding-top: .4em;
-        position: fixed;
-        top: 3.2em;
-        width: 90%;
-        z-index: 4;
 
-        /*Create a horizontal list with spacing*/
-        > li{
+        /*Strip the ul of padding and list styling*/    
+        > ul {
+            background: #f9f9f9;
+            display: none;
+            height: 100%;
+            left: 0;
+            list-style-type:none;
+            margin:0;
+            overflow: hidden;
+            padding-right: 5%;
+            padding-left: 10%;
+            padding-top: .4em;
+            position: fixed;
+            top: 3.2em;
+            width: 90%;
+            z-index: 4;
 
-            > a {
-                border-bottom: solid 1px #ddd;
-                color: #828282;
-                display: inline-block;
-                font-size: .85em;
-                font-weight: bold;
-                line-height: 2em;
-                padding-bottom: .8em; 
-                padding-left: 0; 
-                padding-right: 2%; 
-                padding-top: .4em; 
-                text-align: left;
-                text-decoration: none; 
-                width: 96%;
+            /*Create a horizontal list with spacing*/
+            > li{
 
-                &:before {
-                    content: '♦';
-                    font-size: 2em;
-                    left: -.8em;
-                    position: relative;
-                    top: .11em;
-                    margin-right: -.7em;
+                > a {
+                    border-bottom: solid 1px #ddd;
+                    color: #828282;
+                    display: inline-block;
+                    font-size: .85em;
+                    font-weight: bold;
+                    line-height: 2em;
+                    padding-bottom: .8em; 
+                    padding-left: 0; 
+                    padding-right: 2%; 
+                    padding-top: .4em; 
+                    text-align: left;
+                    text-decoration: none; 
+                    width: 96%;
+
+                    &:before {
+                        content: '♦';
+                        font-size: 2em;
+                        left: -.8em;
+                        position: relative;
+                        top: .11em;
+                        margin-right: -.7em;
+                    }
                 }
-            }
-            /*Hover state for top level links*/
-            &:hover {
-                a {
-                    background: #ddd;                
-                }
-                /*Style for dropdown links*/
-                > ul {
+                /*Hover state for top level links*/
+                &:hover {
                     a {
-                        background: #f3f3f3;
-                        color: #2f3036;
-                        height: 40px;
-                        line-height: 40px;                        
+                        background: #ddd;                
+                    }
+                    /*Style for dropdown links*/
+                    > ul {
+                        a {
+                            background: #f3f3f3;
+                            color: #2f3036;
+                            height: 40px;
+                            line-height: 40px;                        
+                        }
+                    }
+                }
+            } 
+        }
+
+    @include media-query($on-laptop) {
+        float: right;
+
+        ul {
+            background: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+            position: static; /* for ie */
+            width: auto;      /* for ie */
+
+            li {
+                display: inline;
+
+                a{
+                    border: 0;
+                    color: #fff;
+                    display: inline-block;
+                    font-weight: normal;
+                    line-height: 0;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    padding-top: 1.893em; 
+                    padding-bottom: 1.893em; 
+                    width: auto;
+                    
+                    &:hover{
+                        background: none;
+                    }
+
+                    &:before{
+                        content: none;
                     }
                 }
             }
-        } 
+
+        }
     }
 }
 
@@ -149,9 +190,9 @@ li ul li {
 }
 /*Prevent text wrapping*/
 li ul li a {
-    width: auto;
     min-width: 100px;
     padding: 0 20px;
+    width: auto;
 }
 /*Display the dropdown on hover*/
 ul li a:hover + .hidden, .hidden:hover {
