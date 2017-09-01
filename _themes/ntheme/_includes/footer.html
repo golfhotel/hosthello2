@@ -15,7 +15,7 @@
           {% for my_page in site.pages %}
             {% if my_page.add_to_bottom_menu and my_page.title %}
             <li>
-              <a  href="{{ my_page.url | prepend: url }}">
+              <a  href="{{ my_page.url | prepend: site.url }}">
                 {% if my_page.name_in_menu %} {{ my_page.name_in_menu }} 
                 {% else %}{{ my_page.title | escape }} 
                 {% endif %}
