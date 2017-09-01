@@ -1,9 +1,6 @@
-{% if jekyll.environment == "production" %}
-  {% assign url = site.url %}
-{% endif %}
 
 {% if post.permalink %}
-	{{ post.permalink | prepend: url }} 
+	{{ post.permalink | prepend: site.url }} 
 {% else %}
-	{{ post.url | prepend: url }} 
+	{{ post.url | prepend: site.url }} 
 {% endif %}

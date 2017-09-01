@@ -1,16 +1,19 @@
-{% if jekyll.environment == "production" %}
-  {% assign url = site.url %}
-{% endif %}
 
 {% if post.featured %} 
   {% assign foobarbaz = "featured" %}
 {% else %}
   {% assign foobarbaz = " " %}
 {% endif %}
-  
+
+{% if post.featured_img %}
+  {% assign featuredimg = post.featured_img %} 
+{% else %}
+  {% assign featuredimg = site.post_featured_img_default %} 
+{% endif %}
+
   <article class="{{ foobarbaz }}" >
     <header>
-      <a href="{% include post-permalink-url.html %}"><img src="{% include post-image.html %}" ></a>
+      <a href="{% include post-permalink-url.html %}"><img src="{{ featuredimg | prepend: "/" | prepend: site.url }}" ></a>
       
       <h2 class="post-link" >
         <a href="{% include post-permalink-url.html %}">{% if post.title_in_home %}{{ post.title_in_home }}{% else %}{{ post.title | escape }}{% endif %}</a>
@@ -19,6 +22,6 @@
         <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"><b>{{ post.date | date: "%b %-d, %Y" }}</b> - </time>
         {{ post.summary | default: post.content | strip_html | normalize_whitespace | truncate: 86 | escape }}
       </p>
-      <div class="read-more"><a class="tooltip" href="{{ post.url | prepend: url }}" title="Read more" >More</a></div>
+      <div class="read-more"><a class="tooltip" href="{{ post.url | prepend: site.url }}" title="Read more" >More</a></div>
     </header>
   </article>

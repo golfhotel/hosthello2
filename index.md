@@ -1,38 +1,28 @@
 ---
-# Set the page using the follow items.
-# If item is empty, default setting is used.
-# #
 # Title of the article
 title: Web development and programming pills
-# #
 # Use: blog or frontpage or page or post
 layout: page
-# #
 # Work like excerpt ( [text] - default: ignore)
 summary: 
-# #
-# Permalink
-# #
-# Setting to display page in menù ([yes] or [no] - default: yes) 
+# Custom URL (e.g. the-name-of-the-article) 
+# Permalink:
+# Setting to display page in menù (yes | no - default: yes) 
 add_to_top_menu: no
 add_to_bottom_menu: no
-# #
-# Work only with "layout: frontpage" ([text] - default: ignore)
+# Work only with "layout: frontpage" (text - default: ignore)
 section:
   blackquote: Sviluppare progetti web con le tecnologie più potenti è la base di un prodotto vincente e duraturo 
   cite: Foo Barbaz
   link: www.google.it
-# #
-# Seo setting ([text] - default: ignore)
+# Seo setting (text - default: ignore)
 seo:
   title: This is SEO title
   keywords: uno, due, tre
-# #
-# Add or exclude page from sitemap ([yes] or [no] - default: no)
+# Add or exclude page from sitemap (yes | no - default: no)
 # sitemap:
 #	exclude: yes
-# #
-# Display latest posts ([yes] or [no] - default: no)
+# Display latest posts (yes | no - default: no)
 latest_posts: yes
 
 ---

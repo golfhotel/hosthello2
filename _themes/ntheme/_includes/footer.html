@@ -1,6 +1,4 @@
-{% if jekyll.environment == "production" %}
-  {% assign url = site.url %}
-{% endif %}
+
 
 <footer class="site-footer">
 
@@ -59,7 +57,7 @@
 
   </div>
  
-  <link rel="stylesheet" href="{{ "/assets/main.css" | prepend: site.baseurl | prepend: url }}">
+  <link rel="stylesheet" href="{{ "/assets/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,700italic,400,700" rel="stylesheet" type="text/css">
 

@@ -1,6 +1,3 @@
-{% if jekyll.environment == "production" %}
-  {% assign url = site.url %}
-{% endif %}
 
 <label for="show-menu" class="show-menu">
   <svg viewBox="0 0 18 15">
@@ -16,7 +13,7 @@
   <div class="wrapper-logo">
     
     <div class="logo">
-      <a class="site-title" href="{{ url }}/">
+      <a class="site-title" href="{{ site.url }}/">
         <img src="{{ site.logoimg }}" class="portrait" alt="{{ site.logoimg_alt }}">
       </a><!-- .site-title -->
     </div><!-- .logo -->
@@ -27,7 +24,7 @@
           {% for my_page in site.pages %}
             {% if my_page.add_to_top_menu and my_page.title %}
             <li>
-              <a  href="{{ my_page.url | prepend: url }}">
+              <a  href="{{ my_page.url | prepend: site.url }}">
                 {% if my_page.name_in_menu %} {{ my_page.name_in_menu }} 
                 {% else %}{{ my_page.title | escape }} 
                 {% endif %}

@@ -1,6 +1,3 @@
-{% if jekyll.environment == "production" %}
-  {% assign url = site.url %}
-{% endif %}
 
 {% if blog %}
 <div class="featured-posts">
@@ -35,5 +32,5 @@
 </div> <!-- .home .blog .posts-index -->  
 
 {% if frontpage  %}
-<div class="btn"><a href="{{ url }}/blog">All article</a> </div>
+<div class="btn"><a href="{{ site.url }}/blog">All article</a> </div>
 {% endif %}

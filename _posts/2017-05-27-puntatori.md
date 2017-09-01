@@ -1,13 +1,24 @@
 ---
-layout: post
-title:  Puntatori
-date:   2017-05-27
+title: 		Puntatori
+layout: 	post
+date:   	2017-05-27
 categories: linguaggio c
-summary: Nozioni sui puntatori.
-featured: no
+summary:  
+# Permalink:
+add_to_top_menu: 	no
+add_to_bottom_menu: no
+section:
+  blackquote: 	Sviluppare progetti web con le tecnologie più potenti è la base di un prodotto vincente e duraturo 
+  cite: 	  	Foo Barbaz
+  link:		  	www.google.it
+seo:
+  title: 		This is SEO title
+  keywords: 	uno, due, tre
+# sitemap:
+#	exclude: yes
+latest_posts: 	yes
+featured: 		no
 ---
-
-# Puntatori
 
 Un puntatore è come una normale variabile ma con un "potere" in più. Esso infatti non contiene dati in modo esplicito, ma **contiene l'indirizzo di memoria** di un'altra variabile. 
 
@@ -15,7 +26,7 @@ Un puntatore è come una normale variabile ma con un "potere" in più. Esso infa
 
 Essendo il puntatore una variabile va dichiarato allo stesso modo delle altre variabili. 
 
-```
+```c
 // dichiarazione puntatore
 // il puntatore può contenere solo indirizzi memoria
 int *ptr; 
@@ -33,7 +44,7 @@ Una volta dichiarato, è possibile maneggiare la variabile puntatore senza dover
 
 In questo momento il puntatore è stato dichiarato ma non inizializzato. Proviamo a vedere cosa contiene: 
 
-```
+```c
 // dichiarazione puntatore (ma non inizializzato)
 int *ptr;
 
@@ -51,8 +62,8 @@ Il contenuto di un **puntatore non inizializzato** dipende dalla macchina e **no
 * contenuto `0x7ffe71335ea0`: un indirizzo di memoria **scelto a caso dall'elaboratore**. 
 
 ```
-	   Memoria calcolatore   Indirizzi di memoria
-	  +-------------------+  ↑
+       Memoria calcolatore   Indirizzi di memoria
+      +-------------------+  ↑
       │         ...       │ ... 
       +-------------------+       
       │         ...       │ ...
@@ -64,11 +75,11 @@ Il contenuto di un **puntatore non inizializzato** dipende dalla macchina e **no
 
 // oppure
 
-	   Memoria calcolatore    
-	  +-------------------+       
+       Memoria calcolatore    
+      +-------------------+       
       │         ...       │ 0x7ffe71335ea0
       +-------------------+   
-	  │         ...       │   
+      │         ...       │   
       +-------------------+       
       │         ...       │   
       +-------------------+
@@ -78,7 +89,7 @@ Il contenuto di un **puntatore non inizializzato** dipende dalla macchina e **no
 
 Per identificare l'indirizzo memoria di una variabile si usa il carattere `&` seguito dal nome variabile. Infatti se dichiariamo una varibile `var` e vogliamo stamparne l'indirizzo di memoria (o indirizzo fisico) possiamo fare così:
 
-```
+```c
 // dichiarazione variabile
 int var; 
 
@@ -91,7 +102,7 @@ printf("&var = %p", &var);
 
 Ora, il puntatore per essere utile deve **contenere** (in gergo puntare) un indirizzo di memoria di un'altra variabile. Come una normale variabile intera contiene un numero intero, un puntatore deve contenere un indirizzo di memoria. L'indirizzo di memoria non è un elemento "amichevole" da trovare per l'uomo, quindi per identificarlo si dichiara prima una variabile (ricordiamo che dichiarare una variabile vuol dire assegnare alla variabile una locazione della memoria, per cui un indirizzo di memoria) e poi si assegna l'indirizzo della variabile al puntatore (sappiamo già che l'indirizzo di una variabile si ottine con `&nomevar`). 
 
-```
+```c
 //dichiarazione e inizializzazione variabile 
 int var = 100;
 
@@ -104,7 +115,7 @@ ptr = &var;
 
 Si può dichiarare e inizializzare in un'unica riga. 
 
-```
+```c
 //dichiarazione e inizializzazione puntatore
 int *ptr = &var;
 ```
@@ -112,16 +123,16 @@ int *ptr = &var;
 Cosa succede nella memoria del calcolatore.
 
 ```
-	   Memoria calcolatore    
-	  +-------------------+       
+       Memoria calcolatore    
+      +-------------------+       
       │         ...       │ 0x7ffe71335ea0
       +-------------------+      
-	  │         ...       │
+      │         ...       │
       +-------------------+  
       │   0x001001001024  │
       │         ↓         │
- 	  │ +---------------+ │
- 	  │ │      100      │ │
+      │ +---------------+ │
+      │ │      100      │ │
  ptr  │ +---------------+ │ 0x001001001028
       +-------------------+  
  var  │        100        │ 0x001001001024
@@ -136,7 +147,7 @@ Agire "tramite puntatore" non vuol dire "modificare il puntatore". Questo concet
 
 Per modificare il valore di `var` **tramite** il puntatore devo usare l'asterisco `*` prima del nome variabile puntatore.
 
-```
+```c
 // modifico var tramite il puntatore ptr
 *ptr = 200;
 ```
@@ -145,7 +156,7 @@ Il codice sopra modifica il valore contenuto nella variabile `var`.
 
 Se **non** si usa l'asterisco si modifica il contenuto della variabile `ptr` che sappiamo deve essere un indirizzo memoria. Per cui è **sbagliato** fare come segue per modificare il valore contenuto nella variabile `var`.
 
-```
+```c
 //errato: così non si modifica il valore di var
 ptr = 200;
 ```
@@ -154,7 +165,7 @@ Il codice sopra modifica il **contenuto** della variabile `ptr` che (essendo un 
 
 Al puntatore `ptr` possiamo assegnare un altro indirizzo di memoria di un'altra variabile. 
 
-```
+```c
 //dichiaro e inizializzo variabile
 int var2 = 200;
 
