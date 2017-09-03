@@ -14,7 +14,7 @@
     
     <div class="logo">
       <a class="site-title" href="{{ site.url }}/">
-        <img src="{{ site.logoimg }}" class="portrait" alt="{{ site.logoimg_alt }}">
+        <img src="{{ site.logo.img }}" class="portrait" alt="{{ site.logo.alt }} ">
       </a><!-- .site-title -->
     </div><!-- .logo -->
     
@@ -22,11 +22,13 @@
     <nav id="menu">
         <ul>
           {% for my_page in site.pages %}
-            {% if my_page.add_to_top_menu and my_page.title %}
+            {% if my_page.menu.top and my_page.title %}
             <li>
               <a  href="{{ my_page.url | prepend: site.url }}">
-                {% if my_page.name_in_menu %} {{ my_page.name_in_menu }} 
-                {% else %}{{ my_page.title | escape }} 
+                {% if my_page.menu.name %} 
+                  {{ my_page.menu.name }} 
+                {% else %}
+                  {{ my_page.title | escape }} 
                 {% endif %}
               </a>
             </li>

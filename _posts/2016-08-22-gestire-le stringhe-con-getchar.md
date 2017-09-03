@@ -4,6 +4,8 @@ title_in_home: Gestire le stringhe con getchar
 date: 2016-08-22 12:00:00
 layout: post
 summary: Aquisita una stringa digitata dall'utente, verrà controllata per determina se contiene al massimo due caratteri uguali di seguito.
+featured: 
+  show: yes
 ---
 
 # Come gestire le stringhe con getchar

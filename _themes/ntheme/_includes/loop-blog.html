@@ -1,13 +1,12 @@
 
 {% if blog %}
-<div class="featured-posts">
-  
   {% for post in site.posts %}
-      {% if post.featured %}
+      {% if post.featured.show %}
+      <div class="featured-posts">
           {% include posts.html %}
+      </div>
     {% endif %}
   {% endfor %} 
-</div>
 {% endif %}
 
 <div class="posts-index" itemscope itemtype="http://schema.org/BlogPosting">  

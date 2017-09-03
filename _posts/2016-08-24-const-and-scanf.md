@@ -4,7 +4,8 @@ date: 2016-08-24 12:00:00
 layout: post
 author: 
 summary: Un tipico esempio di come la compilzione non è sempre efficace per prevenire errori. Usando scanf() andremo a capire meglio la problematica.
-featured_img: https://pbs.twimg.com/profile_images/519367942866104320/PB96rDH_.png
+featured:
+  image: https://pbs.twimg.com/profile_images/519367942866104320/PB96rDH_.png
 ---
 # Variabile constante e scanf()
 

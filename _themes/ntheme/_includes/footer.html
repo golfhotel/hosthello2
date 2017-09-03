@@ -4,54 +4,56 @@
 
   <div class="wrapper">
 
-    <div class="logo">
-      <a class="site-title" href="{{ url }}/">
-        <img src="{{ site.logoimg }}" class="portrait" alt="{{ site.logoimg_alt }}">
-      </a><!-- .site-title -->
-    </div><!-- .logo -->
-
-    <nav id="menu">
-        <ul>
-          {% for my_page in site.pages %}
-            {% if my_page.add_to_bottom_menu and my_page.title %}
-            <li>
-              <a  href="{{ my_page.url | prepend: site.url }}">
-                {% if my_page.name_in_menu %} {{ my_page.name_in_menu }} 
-                {% else %}{{ my_page.title | escape }} 
-                {% endif %}
-              </a>
-            </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-    </nav>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title | escape }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+        <div class="logo">
+          <a class="site-title" href="{{ url }}/">
+            <img src="{{ site.logo.img }}" class="portrait" alt="{{ site.logo.alt }}">
+          </a><!-- .site-title -->
+        </div><!-- .logo -->
+        <p>{{ site.description | escape }}</p>
       </div>
 
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
+        <label>Contacts</label>
+        <ul class="contact-list">
+          {% if site.email %}
+            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% endif %}
+
+          {% if site.github.username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-github.html username=site.github.username %}
           </li>
           {% endif %}
 
-          {% if site.twitter_username %}
+          {% if site.twitter.username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-twitter.html username=site.twitter.username %}
           </li>
           {% endif %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
+        <label>Info</label>
+        <nav>
+            <ul>
+              {% for p in site.pages %}
+                {% if p.menu.bottom and p.title %}
+                <li>
+                  <a  href="{{ p.url | prepend: site.url }}">
+                    {% if p.menu.name %} 
+                      {{ p.menu.name }} 
+                    {% else %}
+                      {{ p.title | escape }} 
+                    {% endif %}
+                  </a>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+        </nav>        
       </div>
     </div>
 

@@ -4,7 +4,8 @@ date: 2016-08-23 14:00:00
 layout: post
 author: 
 summary: Analisi del comportamento tra due funzioni e la memoria STACK. Ovvero come una funzione andrà ad influenzare il comportamento di una seconda funzione.
-featured_img: https://cdn1.iconfinder.com/data/icons/nature-camping/32/evergreen-forest-512.png
+featured:
+  image: https://cdn1.iconfinder.com/data/icons/nature-camping/32/evergreen-forest-512.png
 ---
 
 # Funzioni e memoria STACK

@@ -1,7 +1,8 @@
 ---
 title: Le strutture 
 layout: post
-featured_img: https://blog.udemy.com/wp-content/uploads/2014/04/bigstock-Code-flat-icon-62122067-300x300.jpg
+featured:
+  image: https://blog.udemy.com/wp-content/uploads/2014/04/bigstock-Code-flat-icon-62122067-300x300.jpg
 ---
 
 # Le strutture

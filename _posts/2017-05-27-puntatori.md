@@ -2,6 +2,7 @@
 title: 		Puntatori
 layout: 	post
 date:   	2017-05-27
+author: 	Mr. Jim
 categories: linguaggio c
 summary:  
 # Permalink:
