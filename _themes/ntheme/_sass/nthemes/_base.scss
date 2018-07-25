@@ -1,6 +1,6 @@
-/**
- * Reset some basic elements
- */
+
+
+// Reset some basic elements
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -8,16 +8,12 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-/**
- * Allow height 100% 
-*/
+// Allow height 100% 
 body, html{
 	height: 100%;
 }
 
-/**
- * Basic styling
- */
+// Basic styling
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family-palm;
     color: $text-color;
@@ -34,11 +30,7 @@ body {
     }
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
+// Set `margin-bottom` to maintain vertical rhythm
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -46,11 +38,7 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-/**
- * Paragraph
-*/
-
+// Paragraph
 p {
     font-size: 1em;
     font-weight: 300;
@@ -60,57 +48,41 @@ p {
     }
 }
 
-/**
- * Images
- */
+// Images
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
+// Figures
+figure > img { display: block; }
+
+figcaption { font-size: $small-font-size; }
 
 
-/**
- * Figures
- */
-figure > img {
-    display: block;
-}
+// Lists
+// =============================================================================
 
-figcaption {
-    font-size: $small-font-size;
-}
-
-
-
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
-}
+ul, ol { margin-left: $spacing-unit; }
 
 li {
     > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+    > ol { margin-bottom: 0; }
 }
 
 
+// Headings
+// =============================================================================
 
-/**
- * Headings
- */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: $base-font-weight;    
 }
 
 
+// Links
+// =============================================================================
 
-/**
- * Links
- */
 a {
     color: $brand-color;
     text-decoration: none;
@@ -125,6 +97,7 @@ a {
     }
 }
 
+// Link logo
 .logo{ 
 
     a {
@@ -140,6 +113,10 @@ a {
     }
 
 }
+
+
+// Layout
+// =============================================================================
 
 .isFrontpage {
 
@@ -183,10 +160,9 @@ a {
                 transform: rotate(90deg) scale(1,2);                
                 z-index: -1;
                 
-                @include media-query(768px){
+                @include media-query(768px) {
                     font-size: 5em;
-                }
-                
+                }                
             }            
             
             .logo {
@@ -199,39 +175,38 @@ a {
                     }
                 }        
             }
-
-
         }    
     }//site.header
 
 
-    /* Manage menù input beaviour in isFrontpage page  */
+    // Manage menù input beaviour in isFrontpage page
     input[id=show-menu]:checked ~ .site-header > .wrapper-logo > .logo {
         
         a {
             width: 7em;
         }
     }
-
 }
 
-/**
- * Manage menù input beaviour in other page 
- */
 
-/*Hide checkbox*/
+// Manage menù input beaviour in other page 
+// =============================================================================
+
+// Hide checkbox
 input[id=show-menu]{
     display: none;
 }
-/*Show menu when invisible checkbox is checked*/
+
+//Show menu when invisible checkbox is checked
 input[id=show-menu]:checked ~ .site-header > .wrapper-logo > #menu > ul{
-    
     display: block;
+    overflow: scroll;
 }
 
-/**
- * Blockquotes
- */
+
+// Blockquotes
+// =============================================================================
+
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
@@ -241,7 +216,7 @@ blockquote {
     margin-top: 1em;
     margin-bottom: 2em;
     
-    @include media-query($on-laptop){
+    @include media-query($on-laptop) {
         margin-top: 2em;
         margin-bottom: 4em;
     }
@@ -251,13 +226,12 @@ blockquote {
     }
 }
 
+// Code formatting
+// =============================================================================
 
-/**
- * Code formatting
- */
 pre,
 code {
-    font-size: 15px;
+    font-size: 13px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
@@ -279,9 +253,9 @@ pre {
 }
 
 
-/**
- * Icons
- */
+// Icons
+// =============================================================================
+
 .icon > svg {
     display: inline-block;
     width: 16px;
@@ -294,9 +268,9 @@ pre {
 }
 
 
-/**
- * hr
-*/
+// hr
+// =============================================================================
+
 hr {
     background: #eee;
     border: 0;
@@ -305,4 +279,7 @@ hr {
     margin-bottom: 1.5em;
     clear: both;
 }
+
+
+
 

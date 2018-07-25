@@ -1,3 +1,6 @@
+---
+---
+
 # Note esame prog. `C`
 
 ![foo](../img/hero.png "Foo")
@@ -34,11 +37,11 @@ La memoria del calcolatore è divisa in sezioni.
 
 ```c
 +-------------------+
-|	   Stack 		|  ----> per le variabili a spazio fisso
+|       Stack       |  ----> per le variabili a spazio fisso
 +-------------------+
-|	    Heap		|  ----> per le variabili a spazio dinamico
+|        Heap       |  ----> per le variabili a spazio dinamico
 +-------------------+
-|      Codice       | -----> dove risiede il programma da eseguire
+|       Codice      | -----> dove risiede il programma da eseguire
 +-------------------+
 ```
 
@@ -50,7 +53,7 @@ La funzione `malloc()` permette di usare la memoria **heap**. `Malloc()` permett
 
 Per usare a gunzione `malloc()` bisogna usare la libreria seguente: 
 
-```
+```c
 //libreria necessaria per usare malloc()
 #include <stdlib.h>
 ```
@@ -61,7 +64,7 @@ Per determinare la quantità di memoria che `malloc()` deve allocare si usa la f
 
 Sapendo come fare per trovare la dimensione necessaria per una variabile. Possiamo quindi dire a `malloc()` quanta memoria riservare per la variabile stessa. Ad esempio proviamo ad allocare la memoria per una varibile di interi.
 
-```
+```c
 #include <stdlib.h>
 ...
 malloc( sizeof(int) );
@@ -71,7 +74,7 @@ Il codice sopra dice alla memoria heap di riservare una spazio di memoria adatto
 
 Abbiamo detto che `malloc()` ritorna l'indirizzo della memoria allocata nello **heap**. Per usare tale indirizzo è necessario dichiarare una variabile puntatore, ossia l'unica variabile capace di gestire indirizzi di memoria. 	
 
-```
+```c
 //dichiaro e inizializzo puntatore
 int *ptr = (int *) malloc( sizeof(int) );
 ```
@@ -80,7 +83,7 @@ Nel codice dichiariamo un puntatore inizializandolo con l'indirizzo memoria rest
 
 **Ricorda.** Casting è un modo usato per far apparire diversamente le variabili. È come travestire le variabili di un certo tipo con le vesti di un'altro tipo.
 
-```
+```c
 //esempio di casting
 float foo = 10.5;
 int bar = (int) foo; //travesto la variabile float come un intero
@@ -92,7 +95,7 @@ Nella variabile `bar` viene inserito solo il valore `10`, ossia la parte intera.
 
 Se una variabile puntatore di tipo `struct` non viene allocata con `malloc()`, non è possibile accedere e/o usare gli elementi interni della struttura. Per chiarire vediamo un esempio: 
 
-```
+```c
 struct node_t{
 	int value;
 	struct node_t *next;
@@ -142,4 +145,80 @@ node->next = &foo; //(es.) indirizzo memoria di una variabile chiamata foo
 //assegnazione usando usando gli indirizzi di head e poi node 
 head->node->value = 100; //numero intero
 head->node->next = &foo; //(es.) indirizzo memoria di una variabile chiamata foo
+```
+
+
+## Puntatori VS ```&```
+
+**Come funziona ```&``` con le variabili.** Il codice ```&``` restituisce l'indirizzo di memoria della variabile, ossia l'indirizzo fisico della memoria dove la variabile risiede.
+
+```c
+int a = 0; 
+printf( "Indirizzo memoria di a: %p", &a );
+
+//esempio di output
+Indirizzo memoria di a: 0x10000020
+```
+
+**Come funziona ```&``` con gli array?** Passare il nome dell'array è come passare l'indirizzo del primo elemento dell'array. L'indirizzo del primo elemento dell'array si identifica così ```&array[0]```.
+
+```c
+int array[5];
+printf( "Indirizzo memoria di array: %p", array );
+printf( "Indirizzo memoria di array: %p", &array[0] );
+```
+Quindi usare ```array``` o usare ```&array[0]``` è la stessa cosa. 
+
+**Come funziona ```&``` con i puntatori?** Una variabile puntatore contiene l'indirizzo fisici di variabili il cui contenuto può essere un intero, float ecc... Quindi se vediamo il contenuto della variabile cui punta il puntatore, troveremo per esempio un numero intero. L'indirizzo fisico si assegna al puntatore nel seguente modo.
+
+```c
+// assegno al puntatore ptr l'indirizzo della variabile a
+int a = 0;
+int * ptr = &a; 
+
+printf( "Indirizzo memoria di a: %p", &a );
+printf( "Ptr contiene l'indirizzo di a: %p", ptr );
+printf( "Contenuto variabile a accessibile tramite ptr: %i", *ptr );
+```
+
+**Come lavora ```&``` con i doppi puntatori?** Un doppio puntatore si comporta allo stesso modo di un puntatore "singolo". Contiene sempre indirizzi fisici ma questa volta l'indirizzo fisico è l'indirizzo di un altro puntatore. Quindi se andiamo a vedere il contenuto della variabile a cui punta il puntatore, troveremo non più un valore intero, ma un indirizzo fisico.
+
+```c
+// assegno al puntatore ptr l'indirizzo della variabile a
+int a = 10;
+int *  ptr  = &a; 
+int ** ptrd = &ptr; 
+
+printf( "\nValore variabile a:        %i", a );
+printf( "\nIndirizzo memoria di a:    %p", &a );
+
+printf( "\n\nValore variabile ptr:    %p", ptr );
+printf( "\nIndirizzo memoria di ptr:  %p", &ptr );
+printf( "\nValore cui punta ptr:      %i ", *ptr );
+
+printf( "\n\nValore variabile ptrd:   %p", ptrd );	
+printf( "\nIndirizzo memoria di ptrd: %p", &ptrd );
+printf( "\nValore cui punta ptrd:     %i", **ptrd );
+printf("\n\n");
+
+//output
+Valore variabile a:        10
+Indirizzo memoria di a:    0x7ffc9fe950a4
+
+Valore variabile ptr:      0x7ffc9fe950a4
+Indirizzo memoria di ptr:  0x7ffc9fe950a8
+Valore cui punta ptr:      10
+
+Valore variabile ptrd:     0x7ffc9fe950a8
+Indirizzo memoria di ptrd: 0x7ffc9fe950b0
+Valore a cui punta ptrd:   10
+
+```
+
+## Puntatori e doppi puntatori passati a funzioni
+
+Un puntatore passato ad una funzione equivale passare alla funzione un indirizzo fisico, ossia l'indirizzo fisico della variabile presente nel puntatore.
+
+```c
+
 ```
