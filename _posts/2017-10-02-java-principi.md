@@ -1,8 +1,9 @@
 ---
 title: Note di Java.
 summary: Informazioni e note sul linguaggio Java.
+date: 2016-08-23 14:00:00
 seo: 
-  title: 
+  title:   Sviluppare in Java.
   summary: foo bar baz
 ---
 

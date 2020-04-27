@@ -18,7 +18,9 @@ title: Hosthello
 email: info@hosthello.com
 description: >  # this means to ignore newlines 
   Hosthello sviluppa progetti web con le tecnologie più recenti.
-url: "https://golfhotel.github.io/hosthello"  # the base hostname & protocol for your site
+
+# usato quando si lancia il comando "JEKYLL_ENV=production jekyll serve --host=[ip-address]"
+url: "https://9ef1e470.ngrok.io"  # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # social informations
@@ -52,6 +54,15 @@ exclude: [readme.md]
 # esegue compressione output css
 sass:
    style: compressed
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
 
 # configurazioni generiche
 defaults:

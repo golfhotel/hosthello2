@@ -1,0 +1,64 @@
+%h1-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: -2px;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+
+
+// Page
+// =============================================================================
+
+.page-title {
+  @extend %h1-title;
+  padding: 0;
+  border: 0;
+}
+
+@include media-query($on-laptop) {
+  .page-title {
+    font-size: 4.5rem; /*IE */
+  } 
+} 
+
+
+
+.isFrontpage{
+
+    .page-title {
+        @extend %h1-title;
+        font-size: 1rem;
+        text-align: center;
+        color: #9de1f9;
+        margin-top: .3rem;
+        font-weight: 400;
+        letter-spacing: 0px;
+        
+        @include media-query($on-laptop) {        
+            font-size: 1.3rem; 
+            max-width: none;
+
+        }
+    }
+}
+
+
+
+// Posts
+// =============================================================================
+
+.post-title {
+  @extend %h1-title;
+
+  @include media-query($on-laptop) {
+    font-size: 36px;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}

@@ -1,25 +1,40 @@
+<div class="tile-wall" itemscope itemtype="http://schema.org/BlogPosting">  
 
-{% if blog %}
+{% if blog or post.featured %}
+  <!-- Jooo -->
+  <div class="featured-posts">
+  <ul class="tile-wrapper">
   {% for post in site.posts %}
-      {% if post.featured.show %}
-      <div class="featured-posts">
-          {% include posts.html %}
-      </div>
+
+      {% assign number=forloop.index %}
+
+    
+    {% if post.featured.show %}
+          
+          {% include posts.html p=number %}
+        
     {% endif %}
   {% endfor %} 
+  </ul>
+  </div>
+  <!-- Kooo -->
 {% endif %}
 
-<div class="posts-index" itemscope itemtype="http://schema.org/BlogPosting">  
 
 
   {% if frontpage or page.latest_posts %}
+    <ul class="tile-wrapper">
     {% for post in site.posts limit: 4 %}
-      {% include posts.html %}
+        {% include posts.html %}
     {% endfor %}
+    </ul>
   {% else %}
+    <ul class="tile-wrapper">
     {% for post in site.posts %}
-      {% include posts.html %}
+        {% assign number=forloop.last %}    
+        {% include posts.html p=number %}
     {% endfor %}  
+    </ul>
   {% endif %}
   
 

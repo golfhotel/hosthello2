@@ -2,10 +2,8 @@
 title: Le strutture 
 layout: post
 featured:
-  image: https://blog.udemy.com/wp-content/uploads/2014/04/bigstock-Code-flat-icon-62122067-300x300.jpg
+  show: yes
 ---
-
-# Le strutture
 
 1. [Definire una struttura](#definire-una-struttura)
 2. [Dichiarare una variabile di tipo struttura](#dichiarare-una-variabile-di-tipo-struttura)

@@ -1,7 +1,11 @@
 ---
+title:      Note esame programmazione 1
+layout: 	post
+date:   	2017-05-27
+author: 	Mr. Jim
+categories: linguaggio c
+summary:    
 ---
-
-# Note esame prog. `C`
 
 ![foo](../img/hero.png "Foo")
 

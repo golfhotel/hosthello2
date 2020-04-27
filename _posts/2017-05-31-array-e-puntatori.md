@@ -1,4 +1,13 @@
-# Array e puntatori
+---
+title: Array e puntatori
+layout:     post
+date:       2017-05-27
+author:     Mr. Jim
+categories: linguaggio c
+summary:    Un'introduzione su come array e puntatori lavorano tra loro.
+latest_posts:   yes
+featured:       no
+---
 
 Di seguito un esempio sulla differenza d'uso su come gli array possono essere gestiti con l'uso di puntatori, a dimostrazione di come (array e puntatore) siano due elementi equivalenti tra loro. 
 

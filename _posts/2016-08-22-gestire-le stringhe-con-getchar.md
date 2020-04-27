@@ -8,8 +8,6 @@ featured:
   show: yes
 ---
 
-# Come gestire le stringhe con getchar
-
 Tramite un esempio vedremo come gestire le stringhe usando la funzione `getchar()` della libreria `stdio.h`. Aquisita una stringa digitata dall'utente, verrà controllata per determina se contiene al massimo due caratteri uguali di seguito. 
 
 ```c

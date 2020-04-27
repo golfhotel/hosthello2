@@ -6,8 +6,6 @@ categories: linguaggio c
 summary: Note sulla distinzione tra puntatori a caratteri e array di caratteri.  
 ---
 
-# Puntatori e array di caratteri
-
 Un *puntatore ad array* è comunemente usato nelle stringhe, ovvero negli array di caratteri: quando si parla di stringhe, si parla quindi di **puntatore ad array di caratteri**.
 
 ```c

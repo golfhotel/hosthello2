@@ -1,0 +1,198 @@
+/**
+ * Gli stili di base includono l'impostazione delle dimensioni dell'intestazione, 
+ * gli stili di collegamento predefiniti, gli stili di carattere predefiniti e 
+ * gli sfondi dei corpi. 
+ * Non dovrebbe essere necessario utilizzare !importantin uno stile Base.
+ * Consiglio vivamente di specificare uno sfondo del corpo. 
+ **/
+
+// Reset some basic elements
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+// Allow height 100% 
+body, html{
+	height: 100%;
+}
+
+// Basic styling
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family-palm;
+    color: $text-color;
+    background-color: #29292C;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    
+    @include media-query(768px){
+        font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family-laptop;
+    }
+}
+
+// Set `margin-bottom` to maintain vertical rhythm
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+// Paragraph
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    @include media-query($on-laptop) {
+        font-size: 1.25rem;    
+    }
+}
+
+// Images
+img {
+    //max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+// Figures
+figure > img { display: block; }
+
+figcaption { font-size: $small-font-size; }
+
+
+// Lists
+// =============================================================================
+
+ul, ol { margin-left: $spacing-unit; }
+
+li {
+    > ul,
+    > ol { margin-bottom: 0; }
+}
+
+
+// Headings
+// =============================================================================
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: $base-font-weight;    
+}
+
+
+// Links
+// =============================================================================
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+
+// Blockquotes
+// =============================================================================
+
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    letter-spacing: -1px;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+    @include media-query($on-laptop) {
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Code formatting
+// =============================================================================
+
+pre,
+code {
+    font-size: 13px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+// hr
+// =============================================================================
+
+hr {
+    background: #eee;
+    border: 0;
+    height: 5px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    clear: both;
+}
+
+
+
+// DA QUI IN POI VERIFICARNE SIGNIFICATO
+
+// Hover state for dropdown links
+li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+
+// Hide dropdown links until they are needed
+li ul {
+    display: none;
+}
+
+// Make dropdown links vertical
+li ul li {
+    display: block;
+    float: none;
+}
+
+// Prevent text wrapping
+li ul li a {
+    min-width: 100px;
+    padding: 0 20px;
+    width: auto;
+}
+
+// Display the dropdown on hover 
+ul li a:hover + .hidden, .hidden:hover { display: block; }

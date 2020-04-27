@@ -1,0 +1,29 @@
+// Site header
+// ex.site-header
+.layout-header {
+    background: $blue-gradient-light;
+    
+    @supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto))
+    and (not (-moz-appearance:none))
+    {
+        //background:red; 
+    }
+
+    @supports (-webkit-appearance:none) and (not (overflow:-webkit-marquee))
+    and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none))
+    {        
+        //background-color:#CCCCCC; 
+    }
+
+
+}
+
+
+.logo{
+    position: relative;
+    
+    @include media-query(768px){
+        margin-left: 0;
+        float: left;
+    }                    
+}

@@ -7,7 +7,6 @@ summary: Un tipico esempio di come la compilzione non è sempre efficace per pre
 featured:
   image: https://pbs.twimg.com/profile_images/519367942866104320/PB96rDH_.png
 ---
-# Variabile constante e scanf()
 
 **Esempio 1.** Il codice seguente dichiara e "inizializza" la variabile intera number con il valore 42. La parola `const` (che tecnicamente si chiama **qualificatore**) serve per dire al compilatore che la variabile avrà un valore costante durante l'esecuzione del programma. 
 

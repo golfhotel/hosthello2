@@ -1,0 +1,98 @@
+// Site footer
+// =============================================================================
+
+.layout-footer {
+    background: #29292C;    
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list, .social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+        //background: red;
+        font-size: 15px;
+        color: $grey-color;
+        // margin-left: -$spacing-unit / 2;
+}
+
+
+.footer-col {  }
+
+.footer-col-1 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    
+    .footer-col { 
+        float: left; 
+
+        .logo a {
+            padding: 0;
+            margin-top: -.4rem;
+            margin-bottom: 2rem;
+        }
+
+        label {
+            margin-bottom: 2rem;
+            display: block;
+            font-weight: bold;
+            color: #fff;
+            font-family: Arial;
+            letter-spacing: .1rem; 
+        }
+
+        ul {
+            margin: 0 ;
+
+            li{ 
+                list-style: none;
+                margin: 0;
+                a {  }
+            }
+        }   
+
+        p {
+            font-size: .9rem;
+            color: #fff;
+            font-family: arial;
+        }
+    }
+    
+    .footer-col-1 {
+        width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+        width:         calc(40% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-2{
+        margin-left: 10%;
+        width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+        width:         calc(20% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 { 
+        margin-left: 10%;
+        width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+        width:         calc(20% - (#{$spacing-unit} / 2));
+    }
+}

@@ -1,0 +1,176 @@
+// Featured Posts
+// =============================================================================
+
+.featured-posts{
+    position: relative;
+    width: 96%; //importante
+    border-radius: .5rem;
+    overflow-x: auto; 
+    padding-bottom: 6%;
+    margin-left: -7%;
+    padding-left: 7%;
+    padding-right: 9%;
+
+    
+    ul.tile-wrapper {
+        position: relative;
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */        
+        align-items: stretch;
+        flex-wrap: wrap;
+        flex-flow: row;
+    }
+
+    li.tile-component{
+        -webkit-box-flex: 1 0 104%;      /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1 0 104%;         /* OLD - Firefox 19- */
+        //width: 20%;               /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1 0 104%;          /* Chrome */
+        -ms-flex: 1 0 104%;              /* IE 10 */
+        flex: 1 0 104%;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        position: relative;
+        //margin-left: 3%;
+        padding-right: 3%;
+
+        &:before{
+            color: #fff;
+            content: "★ Top post";
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            z-index: 3;
+            font-size: .7em;
+            line-height: 1;
+            font-weight: bold;
+            padding-top: 0.8em;
+            padding-right: 1.3em;
+            padding-bottom: 0.55em;
+            padding-left: 1.3em;
+            text-shadow: 0px 0px 4px rgb(150, 150, 150);
+            letter-spacing: .3em;
+            background: rgba(0, 0, 0, 0.14901960784313725);
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+    }
+
+    li.tile-component:last-child{
+        padding-right: 5%;   
+    }
+
+    @include media-query($on-laptop) {
+        margin: 0;
+        margin-bottom: 21rem;
+    }
+    
+    .featured{
+
+        &:last-child{
+            border: 0;
+        }
+        
+        /*
+        &:before{
+            content: ".";
+            color: #CCECF8;
+            position: absolute;
+            width: .5em;
+            height: .9em;
+            padding: 0;
+            background: #CCECF8;
+            left: 50%;
+            bottom: -.85em;
+        } 
+        
+        &:last-child:before{
+            display: none;
+        }
+        */
+        
+        @include media-query(640px){
+            width: 45.86%;
+            
+            &:nth-child(odd){
+                border-right: solid 1px #ccecf8;
+            }
+            &:nth-child(odd){
+                &:last-child{
+                    width: 100%;
+                }
+                
+            }
+            &:nth-last-child(2){
+                border-bottom: 0;
+            }
+        } 
+
+        @include media-query($on-laptop) {
+            font-size: 1.9rem;
+            background: #eee;
+            padding: 1rem;
+            padding-left: 0;
+            margin-bottom: 2.5rem;
+            /*03.10.16*/
+            position: absolute;
+            height: 7rem;
+            width: 100%;
+            padding-right: 0;
+    
+            img{
+                background: #fff;
+                margin: 0;
+                margin-right: 1rem;
+                margin-top: -1rem;
+                margin-bottom: -1rem;
+                width: 9rem;
+            }// img
+            
+            &:after {
+                background: #00a2db;
+                color: #fff;
+                content: "Featured";
+                font-weight: bold;
+                font-size: .38rem;
+                letter-spacing: .1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: .2rem;
+                padding-bottom: .2rem;                    
+                position: absolute;
+                right: -1.8rem;
+                top: 1rem;
+                /* Safari */
+                -webkit-transform: rotate(45deg);
+                /* Firefox */
+                -moz-transform: rotate(45deg);
+                /* IE */
+                -ms-transform: rotate(45deg);
+                /* Opera */
+                -o-transform: rotate(45deg);
+                /* Internet Explorer */
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+            } // &:after
+            .read-more{
+                a{
+                    
+                    &.tooltip{
+                        
+                        &:hover{
+                            
+                            &:after{
+                                font-size: .5rem; 
+                                bottom: -1.6rem;
+                            } // &:after
+                        } //&:hover
+                    } // &.tooltip
+                } // a
+            } // .read-more
+            
+        } // @include media-query($on-laptop)
+    }
+    
+}

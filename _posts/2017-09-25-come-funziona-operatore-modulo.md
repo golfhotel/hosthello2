@@ -1,6 +1,9 @@
 ---
 title: Come funziona l'operatore modulo
 summary: Metodo grafico per capire come funziona l'operatore modulo.
+featured:
+  show: yes
+  image: https://images.unsplash.com/photo-1508921108053-9f757ead871c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
 ---
 
 ```

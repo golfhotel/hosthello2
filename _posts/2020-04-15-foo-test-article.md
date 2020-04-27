@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Markdown preview e LiveReload in SublimeText.."
-date:   2017-02-11
+date:   2020-04-14
 categories: enviroment
 summary: Come settare un corretto ambiente di sviluppo.  
-featured: no
+featured:
+  image: /img/photo-1516820827855-3ea1bd6f79ea.jpg
 ---
 
 Molte applicazioni web supportano il Markdown come linguaggio di scrittura. Ad esempio **GitHub Pages**, il sistema di sviluppo web **Jekyll** o il famoso CMS **Wordpress** (al momento della scrittura solo su piattaforma wordpress.com). 

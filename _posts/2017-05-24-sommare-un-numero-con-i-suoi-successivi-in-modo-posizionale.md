@@ -1,4 +1,27 @@
-# Sommare un numero con i suoi successivi in modo posizionale.
+---
+title: Sommare un numero con i suoi successivi in modo posizionale.
+layout:     post
+date:       2017-09-19
+author:     Mr. Jim
+categories: linguaggio c
+summary:  
+# Permalink:
+add_to_top_menu:    no
+add_to_bottom_menu: no
+section:
+  blackquote:   Sviluppare progetti web con le tecnologie più potenti è la base di un prodotto vincente e duraturo 
+  cite:         Foo Barbaz
+  link:         www.google.it
+seo:
+  title:        This is SEO title
+  keywords:     uno, due, tre
+# sitemap:
+#   exclude: yes
+latest_posts:   yes
+featured: 
+  show: yes
+  image: https://drscdn.500px.org/photo/1005244079/q%3D80_m%3D1500/v2?sig=7930b1775aa3be09b2e384cc91d6376394ec7d02f207b14ac2e6f2166a1ecf80
+---
 
 Per ogni numero in un array di interi, 
 

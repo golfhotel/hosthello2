@@ -1,0 +1,20 @@
+
+ 
+.page-header{
+  border-bottom: solid 1px #eee ;
+  margin-bottom: 1.3rem;
+  padding-bottom: 0.8rem;
+   
+  p { font-style: italic; }
+  
+}
+
+@include media-query($on-laptop) {
+  .page-header{
+    border: 0;
+    margin: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+  }
+}

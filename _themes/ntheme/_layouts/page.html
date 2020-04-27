@@ -1,24 +1,30 @@
+---
+layout: compress
+---
+
 {% include temp-top.html %}
     <!-- page.html -->
-    <main role="main" class="page-content" aria-label="Content">
+    <main class="layout-main" aria-label="Content">
       {% if page.layout != "frontpage" %}
-      <div class="wrapper">
+      <div class="layout-wrapper">
       {% endif %}       
         
         {% if page.layout != "frontpage" and page.layout != "post"  %}
-          {% include page-title.html %}
+          <article class="page">
+            {% include page-title.html %}
+          </article>
         {% endif %}
         
         {{ content }}
 
         {% if page.latest_posts and page.layout != "frontpage" %}
-          <h2>Latest posts</h2>
+          <h2>Golden posts</h2>
           {% include loop-blog.html %}
         {% endif %}
 
       {% if page.layout != "frontpage" %}
-      </div><!-- .wrapper -->
+      </div><!-- .layout-wrapper -->
       {% endif %}
-    </main><!-- .page-content -->
+    </main><!-- .layout-main -->
     <!-- END page.html -->
 {% include temp-bottom.html %}

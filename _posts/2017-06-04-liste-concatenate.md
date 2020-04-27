@@ -1,4 +1,7 @@
-# Lista di elementi concatenati semplici
+---
+title: Lista di elementi concatenati semplici
+layout: post
+---
 
 La lista di elementi concatenate semplici sono un insieme di nodi dove ogni nodo è inteso come elemento della lista. 
 

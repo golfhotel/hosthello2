@@ -1,101 +1,6 @@
 
 
-// Reset some basic elements
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
 
-// Allow height 100% 
-body, html{
-	height: 100%;
-}
-
-// Basic styling
-body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family-palm;
-    color: $text-color;
-    background-color: #29292C;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    
-    @include media-query(768px){
-        font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family-laptop;
-    }
-}
-
-// Set `margin-bottom` to maintain vertical rhythm
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-
-// Paragraph
-p {
-    font-size: 1em;
-    font-weight: 300;
-    line-height: 1.5;
-    @include media-query($on-laptop) {
-        font-size: 1.25em;    
-    }
-}
-
-// Images
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-// Figures
-figure > img { display: block; }
-
-figcaption { font-size: $small-font-size; }
-
-
-// Lists
-// =============================================================================
-
-ul, ol { margin-left: $spacing-unit; }
-
-li {
-    > ul,
-    > ol { margin-bottom: 0; }
-}
-
-
-// Headings
-// =============================================================================
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: $base-font-weight;    
-}
-
-
-// Links
-// =============================================================================
-
-a {
-    color: $brand-color;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
-}
 
 // Link logo
 .logo{ 
@@ -105,7 +10,7 @@ a {
         display: block;
         padding-bottom: .6rem;
         padding-top: .6rem;
-        width: 7em;
+        width: 7rem;
 
         img{ 
             width: 100%;
@@ -120,7 +25,7 @@ a {
 
 .isFrontpage {
 
-    .site-header{
+    .layout-header{
 
         &::before{
             content: "";
@@ -147,31 +52,31 @@ a {
             z-index: -1;   
         }        
         
-        .wrapper-logo{
+        .layout-wrapper{
             
             &:after{
                 -ms-transform: rotate(90deg) scale(1,2); /* IE 9 */
                 -webkit-transform: rotate(90deg) scale(1,2); /* Chrome, Safari, Opera */
-                bottom: -.62em;
+                bottom: -.62rem;
                 color: #59d3fe;
                 content:"›";
-                font-size: 3em;
+                font-size: 3rem;
                 position: fixed;
                 transform: rotate(90deg) scale(1,2);                
                 z-index: -1;
                 
                 @include media-query(768px) {
-                    font-size: 5em;
+                    font-size: 5rem;
                 }                
             }            
             
             .logo {
                 
                 a {
-                    width: 11em;
+                    width: 11rem;
 
                     @include media-query(768px) {
-                        width: 22.5em;    
+                        width: 22.5rem;    
                     }
                 }        
             }
@@ -180,10 +85,10 @@ a {
 
 
     // Manage menù input beaviour in isFrontpage page
-    input[id=show-menu]:checked ~ .site-header > .wrapper-logo > .logo {
+    input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > .logo {
         
         a {
-            width: 7em;
+            width: 7rem;
         }
     }
 }
@@ -198,59 +103,13 @@ input[id=show-menu]{
 }
 
 //Show menu when invisible checkbox is checked
-input[id=show-menu]:checked ~ .site-header > .wrapper-logo > #menu > ul{
+input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > #menu > ul{
     display: block;
     overflow: scroll;
 }
 
 
-// Blockquotes
-// =============================================================================
 
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    letter-spacing: -1px;
-    font-style: italic;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    
-    @include media-query($on-laptop) {
-        margin-top: 2em;
-        margin-bottom: 4em;
-    }
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
-// Code formatting
-// =============================================================================
-
-pre,
-code {
-    font-size: 13px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
 
 
 // Icons
@@ -268,17 +127,7 @@ pre {
 }
 
 
-// hr
-// =============================================================================
 
-hr {
-    background: #eee;
-    border: 0;
-    height: 5px;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    clear: both;
-}
 
 
 

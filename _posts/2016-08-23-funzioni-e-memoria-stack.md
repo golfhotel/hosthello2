@@ -8,8 +8,6 @@ featured:
   image: https://cdn1.iconfinder.com/data/icons/nature-camping/32/evergreen-forest-512.png
 ---
 
-# Funzioni e memoria STACK
-
 Analizziamo il codice sotto e arriveremo a capire come una funzione, che non rispetta alcuni accorgimenti, generi un output inaspettato.  
 
 ```
