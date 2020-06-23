@@ -1,0 +1,56 @@
+
+
+{% assign posts_multiple_cat = '' | split: ", " %}
+
+{% for cat_current_post in page.categories %}
+  {% assign posts_single_cat = site.posts | where: "categories" , cat_current_post | uniq %} 
+  {% assign posts_multiple_cat = posts_multiple_cat | concat: posts_single_cat  %}  
+{% endfor %}
+
+{% assign posts_multiple_cat = posts_multiple_cat | uniq  %}
+
+
+
+
+{% if posts_multiple_cat != empty %}
+
+  <div class="tile-wall">
+    
+      <div class="tile-category__title">
+        <h2 class="tile-category__title--head">Sullo stesso argomento</h2>
+      </div>
+    
+
+
+    <ul class="tile-wrapper">
+
+    {%- comment -%}Inizializzo variabili{%- endcomment -%}
+    {% assign count_length = 0 %}
+    {% assign counter = 0 %}
+
+    {%- comment -%} Conto tutti i post con titolo diverso dalla pagina corrente
+    Non posso usare forloop.index perchè conteggia tutti gli elementi, anche quelli con nome
+    uguale alla pagina corrente.
+    {%- endcomment -%}
+    {% for post in posts_multiple_cat limit: 4  %}
+      {% if post.title != page.title %}
+        {% assign count_length = count_length | plus: 1 %}  
+      {% endif %}
+    {% endfor %}
+
+    {% for post in posts_multiple_cat limit: 4  %}
+  
+      {% if post.title != page.title %}
+        
+        {% assign counter = counter | plus: 1 %}
+        
+        {% include posts.html length=count_length cardinal=counter lastpost=forloop.last %} 
+              
+      {% endif %}
+
+    {% endfor %}
+    </ul>
+  
+  </div>
+
+{% endif %}

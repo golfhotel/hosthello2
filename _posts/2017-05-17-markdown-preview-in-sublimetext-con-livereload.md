@@ -2,9 +2,11 @@
 layout: post
 title:  "Markdown preview e LiveReload in SublimeText.."
 date:   2017-02-11
-categories: enviroment
+categories: [enviroment]
 summary: Come settare un corretto ambiente di sviluppo.  
-featured: no
+featured:
+  show: true
+  image_from_url: "https://images.unsplash.com/photo-1546963128-ce695e989bac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1769&q=80"
 ---
 
 Molte applicazioni web supportano il Markdown come linguaggio di scrittura. Ad esempio **GitHub Pages**, il sistema di sviluppo web **Jekyll** o il famoso CMS **Wordpress** (al momento della scrittura solo su piattaforma wordpress.com). 
@@ -23,20 +25,23 @@ Preso un file con estensione `.md`, vogliamo vederne il contenuto (o anteprima) 
 Sono necessari i seguenti programmi che devono essere già presenti (quindi installati) sul PC/MAC: 
 
 * l'editor di testo SublimeText 2 o 3.
+
 * un browser web Chrome (usato nel nostro esempio), Firefox o Safari.
 
 ## Cosa verrà installato
 
 Al termine della procedura spiegata di seguito, nel PC/MAC avremo:
 
-- [ ] l'editor di testo SublimeText con Markdown Preview (installato) e il plugin LiveReload (installato e configurato).
-- [ ] un browser web (nel nostro caso Chrome) con LiveReload (installato e configurato). 
+- l'editor di testo SublimeText con Markdown Preview (installato) e il plugin LiveReload (installato e configurato).
 
-## Markdown Preview
+- un browser web (nel nostro caso Chrome) con LiveReload (installato e configurato). 
+
+## Installare Markdown Preview
 
 È necessario installarlo solo in SublimeText editor.
 
 1. Aprire l'editor SublimeText 2/3
+
 2. Premere i tasti cmd + shift + p. 
 	
 	- Se già presente si aprirà Package Control. 
@@ -48,18 +53,18 @@ Al termine della procedura spiegata di seguito, nel PC/MAC avremo:
 
 5. Riavvia l'editor SublimeText (chiudi e riapri il programma).
 
-## LiveReload plugin
+## Installre LiveReload plugin
 
 LivePreload va installato sia in SublimeText e sia nel browser. 
 
-### Installare LiveReload in SublimeText
-
-In ST LiveReload serve per creare un canale di comunicazione tra editor e browser.
+In Sublime Text, LiveReload servirà per creare un canale di comunicazione tra editor e browser.
 
 1. Aprire l'editor SublimeText 2/3
+
 2. Premere i tasti cmd + shift + p. 
 	
 	- Se già presente si aprirà Package Control. 
+
 	- Se non presente installare Package Control (https://packagecontrol.io/installation). 
 
 3. Digitare "Package Control: Install Package" e premere Invio 
@@ -86,7 +91,9 @@ In ST LiveReload serve per creare un canale di comunicazione tra editor e browse
 Nel browser LiveReload serve per aggiornare in automatico la pagina web. Il plugin una volta avviato, esegue un monitoraggio del file .html aperto nel browser e ne aggiorna il contenuto quando modificato. In pratica è come se venisse prenuto F5 sul browser.
 
 * **Firefox:** http://download.livereload.com/2.1.0/LiveReload-2.1.0.xpi 
+
 * **Chrome:** https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei 
+
 * **Safari:** http://download.livereload.com/2.1.0/LiveReload-2.1.0.safariextz 
 
 
@@ -95,14 +102,18 @@ Nel browser LiveReload serve per aggiornare in automatico la pagina web. Il plug
 
 Avendolo già installato in precedenza, sul browser troveremo l'icona del plugin LiveReload. 
 	
-*  digitare nell'URL del browser il testo seguente `chrome://extensions/` per accedere alle estensioni/plugin installati. Cercare LiveReload e spuntare `Consenti l'accesso agli URL dei file`.
+* Digitare nell'URL del browser il testo seguente `chrome://extensions/` per accedere alle estensioni/plugin installati. 
+
+* Cercare LiveReload e spuntare `Consenti l'accesso agli URL dei file`.
+
 
 ## Cosa è stato installato
 
 A questo punto nel PC/MAC abbiamo:
 
-- [x] l'editor di testo SublimeText con Markdown Preview (installato) e il plugin LiveReload (installato e configurato).
-- [x] un browser web (nel nostro caso Chrome) con LiveReload (installato e configurto).  
+- l'editor di testo SublimeText con Markdown Preview (installato) e il plugin LiveReload (installato e configurato).
+
+- un browser web (nel nostro caso Chrome) con LiveReload (installato e configurto).  
 
 ## Istruzioni d'uso
 
@@ -126,7 +137,4 @@ A questo punto nel PC/MAC abbiamo:
 
 * Sublime Text 2/3 Markdown Preview (https://github.com/revolunet/sublimetext-markdown-preview)
 
-* Install LiveReload on Sublime Text 3 (http://stackoverflow.com/questions/25886011/how-do-i-install-livereload-on-sublime-text-3)
-
-### User as Developer 
- Ivan Garrini - http://www.twitter.com/ivangarrini
+* Install LiveReload on Sublime Text 3 (http://stackoverflow.com/questions/25886011/how-do-i-install-livereload-on-sublime-text-3) 

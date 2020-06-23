@@ -1,46 +1,173 @@
 
-{% if post.featured.show %} 
-  {% assign foobarbaz = "featured" %}
+
+{%- comment -%}
+GESTIONE FEATURED IMAGE CON URL LOCALE DAL FRONT MATTER DEL POST.
+L'immagine prende l'url del sito locale.
+{%- endcomment -%}
+    {%- comment -%}Tolgo gli spazi dall'url preso dal Fornt Matter del post {%- endcomment -%}
+    {% if post.featured.image %}
+      {% assign featuredimg_striped = post.featured.image | strip %}
+    {% endif %}
+    {%- comment -%}Se esiste l'URL e non è vuoto{%- endcomment -%}
+    {% if featuredimg_striped and 
+          featuredimg_striped != empty %}
+          {% assign featuredimg = featuredimg_striped | prepend: site.url  %} 
+    {% endif %}
+    {%- comment -%}Resetto variabile per evitare problemi di memoria{%- endcomment -%}
+    {% assign featuredimg_striped = nil %}
+{%- comment -%}FINE{%- endcomment -%}
+
+{%- comment -%}
+GESTIONE FEATURED IMAGE CON URL WEB DAL FRONT MATTER DEL POST
+L'immagine prende l'URL del sito web.
+{%- endcomment -%}    
+    {%- comment -%}Tolgo gli spazi dall'url preso dal Fornt Matter del post {%- endcomment -%}   
+    {% if post.featured.image_from_url %}
+      {% assign featuredimg_striped = post.featured.image_from_url | strip %}
+    {% endif %}
+    {%- comment -%}Se esiste l'URL e non è vuoto{%- endcomment -%}
+    {% if featuredimg_striped and 
+          featuredimg_striped != empty %}
+          {% assign featuredimg = featuredimg_striped  %} 
+    {% endif %}
+    {%- comment -%}Resetto variabile per evitare problemi di memoria{%- endcomment -%}
+    {% assign featuredimg_striped = nil %}
+{%- comment -%}FINE{%- endcomment -%}
+
+
+{% comment %}
+Quando posts.html non riceve i parametri, la classe è small.
+{% endcomment %}
+{% assign dimension = "xsmall" %} 
+
+
+{% comment %}
+Assegna classe specifica a singolo post.
+
+@param include.length   : numero intero. Totale dei post presenti nella lista posts.
+@param include.cardinal : numero intero. Posizione nella lista  
+@param include.lastpost : true o false. Identifica se il il post è l'ultimo.
+
+Il codice sottostante assegna una classe ad ogni singolo post
+in modo da avere una diposizione uniforme ed il controllo dell'ultimo post.
+
+Esempio di disposizione quando i posts sono in numero pari.
+|--------- Giant ---------|
+|---- Big ----|-- small --|
+|-- small --|---- Big ----|
+|---- Big ----|-- small --|
+|--------- Giant ---------|
+
+Esempio di disposizione quando i posts sono in numero dispari.
+|--------- Giant ---------|
+|---- Big ----|-- small --|
+|-- small --|---- Big ----|
+|---- Big ----|-- small --|
+
+Questo metodo è utile per evitare la seguente disposizione.
+|---------- Giant --------|
+|---- Big ----|-- small --|
+|-- small --|---- Big ----|
+|---- Big ----|
+{% endcomment %}
+
+
+
+{% if include.length and include.cardinal %}
+
+  {% comment %} Verifico se il totale dei post è in numero pari (0) o dispari (1). {% endcomment %}
+  {% assign parity = include.length | modulo: 2 %}
+
+  {% comment %} Verifico se il post è in posizione pari (0) o dispari (1) {% endcomment %}
+  {% assign position = include.cardinal | modulo: 2 %}
+
+  {% comment %} Usato per ottenere l'ordine small, big, big, small {% endcomment %}
+  {% assign multipleof4 = include.cardinal | modulo: 4 %}
+
+  {% comment %} Esiste un solo post in totale {% endcomment %}
+  {% if include.length == 1 %}
+    {% assign dimension = "giant"  %}
+
+  {% comment %} Esistono solo due post in totale ed il post trattato è il primo {% endcomment %}
+  {% elsif include.length == 2 and include.cardinal == 1 %} 
+    {% assign dimension = "big"  %}
+
+  {% comment %} Esistono solo due post in totale ed il post trattato è il secondo {% endcomment %}
+  {% elsif include.length == 2 and include.cardinal == 2 %}   
+    {% assign dimension = "small" %}
+
+  {% comment %} Esistono oltre tre post ed il post trattato è il primo {% endcomment %}
+  {% elsif include.length > 3 and include.cardinal == 1 %}     
+    {% assign dimension = "giant" %}
+  {% elsif include.length > 3 and multipleof4 == 0 %}   
+    {% assign dimension = "small" %}
+  {% elsif include.length > 3 and multipleof4 == 1 %}   
+    {% assign dimension = "big" %}
+  {% elsif include.length > 3 and multipleof4 == 2 %}   
+    {% assign dimension = "big" %}
+  {% elsif include.length > 3 and multipleof4 == 3 %}   
+    {% assign dimension = "small" %}    
+  {% endif %}
+
+  {% comment %} L'ultimo post è trattato a parte quando tutti i posts sono di numero pari e
+  se i post sono superiori a 2 {% endcomment %}
+  {% if include.lastpost == true and parity == 0 and include.length > 2 %}
+    {% assign dimension = "giant" %}     
+  {% endif %}
+
+{% endif %}
+
+
+{% if post.title_in_home %}
+      {% assign post_title = post.title_in_home %}
 {% else %}
-  {% assign foobarbaz = " " %}
+      {% assign post_title = post.title | escape %}
 {% endif %}
 
-{% if post.featured.image %}
-  {% assign featuredimg = post.featured.image  %} 
-{% endif %}
+{% comment %} Usato per eseguire debug
+<li class="tile-component _onetwinxrow _threetwinsxrow 
+  _{{ dimension }} cardinal_{{ include.cardinal }}  par_{{ parity }}"></li>
+{% endcomment %}
+<li class="tile-component _onetwinxrow _threetwinsxrow  _{{ dimension }} in-sidebar"></li>
+  <a aria-label="{{ post_title }}" href="{{ post.url | prepend: site.url }}" title="Leggi {{ post_title }}">
+    <div class="tile-component-link">
+      <div class="tile-media">
+        <div class="image" style="background-image: url({{ featuredimg }});">
 
-{% if include.p == true %}
-  {% assign item = "1"  %}
-{% else %}
-  {% assign item = ""  %}
-{% endif %}
-<li class="tile-component {{ item }} ">
-  <a class="tile-component-link" aria-label="{% if post.title_in_home %}{{ post.title_in_home }}{% else %}{{ post.title | escape }}{% endif %}" href="{{ post.url | prepend: site.url }}">
-    <article class="tile-content {{ foobarbaz }}" >
-      <header class="tile-header">
-        <div class="tile-media">
-          <div class="image" style="background-image: url({{ featuredimg }});">
+        </div>
+      </div>
 
+      <article class="tile-content" >
+        <header class="tile-header">
+
+          <div class="tile-title">
+            <h2>         
+              {{ post_title }}
+            </h2>
           </div>
-        </div>
-        <div class="tile-title">
-          <h2>         
-            {% if post.title_in_home %}{{ post.title_in_home }}{% else %}{{ post.title | escape }}{% endif %}
-          </h2>
-        </div>
-        <div class="tile-summary">
-          <p class="post-summary">
-            {{ post.summary | default: post.content | strip_html | normalize_whitespace | truncate: 86 | escape }}
-          </p>
-        </div>
-      </header>
-      <footer class="tile-entry">
-        <div class="date">
-          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-            <b>{{ post.date | date: "%-d %b %Y" }}</b>
-          </time>
-        </div>
-      </footer>
-    </article>
+          <div class="tile-summary">
+            <p class="post-summary">
+              {{ post.summary | default: post.content | strip_html | normalize_whitespace | truncate: 86 | escape }}
+            </p>
+          </div>
+        </header>
+        <footer class="tile-entry">
+          <div class="date">
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+              {{ post.date | date: "%-d %b %Y" }}
+            </time>
+          </div>
+        </footer>
+      </article>
+    </div>
   </a>
 </li>
+
+{% comment %}
+Resetto varibili.
+{% endcomment %}
+{% assign parity = nil %}
+{% assign position = nil %}
+{% assign dimension = nil %}
+{% assign multipleof4 = nil %}
+

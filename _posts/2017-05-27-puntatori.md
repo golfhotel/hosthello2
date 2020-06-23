@@ -3,7 +3,7 @@ title: 		Puntatori
 layout: 	post
 date:   	2017-05-27
 author: 	Mr. Jim
-categories: linguaggio c
+categories: [linguaggio c]
 summary:  
 # Permalink:
 add_to_top_menu: 	no

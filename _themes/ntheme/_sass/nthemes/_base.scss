@@ -23,7 +23,7 @@
 // Layout
 // =============================================================================
 
-.isFrontpage {
+.layout-frontpage {
 
     .layout-header{
 
@@ -84,7 +84,7 @@
     }//site.header
 
 
-    // Manage menù input beaviour in isFrontpage page
+    // Manage menù input beaviour in frontpage page
     input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > .logo {
         
         a {

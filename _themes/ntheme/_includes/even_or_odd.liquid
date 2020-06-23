@@ -1,0 +1,9 @@
+
+
+{% assign this_number = include.param_1 | modulo:2 %}
+
+{% if this_number == 0 %}
+  {% assign fooz = "even"  %}
+{% else %}
+  {% assign fooz = "odd"  %}
+{% endif %}

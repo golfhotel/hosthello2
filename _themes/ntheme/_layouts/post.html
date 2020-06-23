@@ -1,16 +1,108 @@
 ---
-layout: page
+layout: base
 ---
-<!-- post.html -->
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header><!-- .post-header -->
+{%- comment -%}
+Gestisce come visualizzare il post con e senza sidebar.
+{%- endcomment -%}
+{% if page.sidebar %}
+  {% assign flexorfix = "is-flexible" %} 
+{% else %}
+  {% assign flexorfix = "is-fixed" %} 
+{% endif %}
+
+
+<main class="layout-main" aria-label="Content">
+<div class="layout-wrapper">
+
+  {% include snippet_preview.html %}
+
+  <!-- post.html -->
+  <div class="post flex-it">
+
+    <article class="post-container {{ flexorfix }}"  itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        <div class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</div>
+
+      
+        <div class="post-categories">
+          {% assign categories = page.categories %}
+          {% for category in categories %}
+            <a href="{{site.baseurl}}/category/{{ category | replace: " ", "-" }}" title="Vai alla categoria {{category}}">
+              {{category}}</a>{% unless forloop.last %}{% endunless %}
+          {% endfor %}
+        </div>
+        {% assign categories = nil %}
+
+        {% if page.featured.show %}
+          <div class="post-image">
+              <img src="{{page.featured.image_from_url}}" alt="{{ page.featured.image_alt }}">
+          </div>
+        {% endif %}      
+        
+      </header><!-- .post-header -->
+
+
+
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+      </div><!-- .post-content -->
+
+    </article><!-- .post -->
+
+
+
+    {% include sidebar.html %}
+
+  </div>
+
+
+</div>
+</main>
+
+
+
+
+
+{% if page.latest_posts %}
+  {% include latest_posts.html %}
+{% endif %}
   
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div><!-- .post-content -->
 
-</article><!-- .post -->
+
+{%- comment -%}
+<!-- sperimentale -->
+  {% assign sp  = site.posts %}
+  {% assign spc = sp[0].categories %}
+    
+  <hr>
+      <ul>
+        <li>Post0 ---> {{ sp[0].title }} - {{ sp[0].categories    | jsonify }}</li> 
+        <li>Post0 ---> {{ sp[0].title }} - {{ sp[0].categories[0] | jsonify }}</li>  
+        <li>Post0 ---> {{ sp[0].title }} - {{ sp[0].categories[1] | jsonify }}</li>
+
+        <li>Post1 ---> {{ sp[1].title }} - {{ sp[1].categories    | jsonify }}</li>  
+        <li>Post1 ---> {{ sp[1].title }} - {{ sp[1].categories[0] | jsonify }}</li>  
+        <li>Post1 ---> {{ sp[1].title }} - {{ sp[1].categories[1] | jsonify }}</li>  
+        
+        <li>Post2 ---> {{ sp[2].title }} - {{ sp[2].categories    | jsonify }}</li> 
+        <li>Post2 ---> {{ sp[2].title }} - {{ sp[2].categories[0] | jsonify }}</li> 
+        <li>Post2 ---> {{ sp[2].title }} - {{ sp[2].categories[1] | jsonify }}</li> 
+
+        <li>Post2 ---> {{ sp[2].title }} - {{ spc[0] | jsonify }} ---> {% assign woo = site.posts | map: "categories" | uniq %} {{ woo }} </li> 
+        <li>Post2 ---> {{ sp[2].title }} - {{ spc[0] | jsonify }} ---> {{ site.categories[1] | jsonify }} </li> 
+        <li>Current -> {{ page.title | jsonify }} - {{ page.categories | jsonify }}</li> 
+        
+      </ul>
+  <hr>
+
+
+Snippet per uso futuro.
+{% assign all_category = site.posts | map: "categories" | uniq %} {{ woo }}
+{%- endcomment -%}
+
+
+
+

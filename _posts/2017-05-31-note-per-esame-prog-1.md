@@ -3,7 +3,7 @@ title:      Note esame programmazione 1
 layout: 	post
 date:   	2017-05-27
 author: 	Mr. Jim
-categories: linguaggio c
+categories: [linguaggio c]
 summary:    
 ---
 

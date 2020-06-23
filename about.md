@@ -1,8 +1,11 @@
 ---
 layout: page
-title: Who we are
+title: "Layout: Page"
+summary: "Il layout Page visualizza il layout della pagina largo."
 menu: 
-   name: About
+  name: Page normal
+seo: 
+  title: Page normal
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

@@ -1,4 +1,31 @@
+
+        {%- comment -%}
+        Richiede il plug-in jekyll-archive
+        https://github.com/jekyll/jekyll-archives
+        {%- endcomment -%}
+        {% if page.type == "category" %}
+          {% assign nome_tipo = "categoria" %}
+        {% else %}
+          {% assign nome_tipo = page.type %}
+        {% endif %}
+
+
+
+
         <header class="page-header">
-          <h1 class="page-title">{{ page.title | escape }}</h1>
-          <p>{{ page.summary }}</p>
+
+            <h1 class="page-title">
+              {% if page.layout == "archive-category" %}
+              <span class="page-title__category">{{ nome_tipo | capitalize }}</span>
+              {% endif %}
+
+              {{ page.title | escape | capitalize }} 
+            </h1>            
+            
+            {% assign summary = page.summary | strip %}
+            {% if summary != empty %}
+               <p class="page-header__description">{{ page.summary }}</p>  
+            {% endif %}
+            
         </header><!-- .page-header -->
+      

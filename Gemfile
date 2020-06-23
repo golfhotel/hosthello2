@@ -22,6 +22,7 @@ gem "ntheme", :path => "_themes/"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.13"
 #   gem 'jekyll-minifier', '~> 0.1.4'
+   gem 'jekyll-archives'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,0 +1,28 @@
+---
+layout: page
+---
+
+{%- comment -%}
+Richiede il plug-in jekyll-archive
+https://github.com/jekyll/jekyll-archives
+{%- endcomment -%}
+{% if page.type == "category" %}
+  {% assign nome_tipo = "categoria" %}
+{% else %}
+  {% assign nome_tipo = page.type %}
+{% endif %}
+
+<div class="tile-wall" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <!-- 
+  <header class="tile-category__title">
+      <h1 class="tile-category__title--head"><span class="tile-category__title--desc">{{ nome_tipo | capitalize }}</span> {{ page.title }}</h1>
+  </header>
+  -->
+  <p>Tutti i post della categoria {{ page.title }}.</p>
+  <ul class="tile-wrapper">
+    {% for post in page.posts %}
+      {% include posts.html  %} 
+    {% endfor %}
+  </ul>
+</div>
+

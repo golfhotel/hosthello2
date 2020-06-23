@@ -1,0 +1,22 @@
+---
+layout: compress
+---
+{%- comment -%}
+Gerarchicamente, è la base di tutti i layout.
+{%- endcomment -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    {% include head.html %}
+
+    <body class="layout-{{ page.layout }}">
+
+        {% include header.html %}
+        
+        {{ content }}
+
+        {% include footer.html %}
+
+    </body>
+
+</html>

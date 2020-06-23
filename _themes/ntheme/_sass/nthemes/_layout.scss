@@ -8,7 +8,7 @@
 }
 
 
-.isFrontpage{ 
+.layout-frontpage{ 
     
     .layout-header{
         height: 100%;
@@ -27,7 +27,7 @@
     }
 }
 
-.isFrontpage{
+.layout-frontpage{
     
     .layout-wrapper{
         padding-bottom: 3rem;
@@ -115,29 +115,53 @@
  
  
 
-.isSinglepage, .isFrontpage{
+.layout-page, .layout-frontpage{
     
     article{
-        //font-size: .75rem;
-    
-        @include media-query(768px) {
-            font-size: 1.1rem;
-        }  
-             
+        //font-size: .75rem;        
     }
 }
 
-.isPost{
+.layout-post{
     
     article{
         font-size: 1rem;
         background: none;
-        width: 100%;
+        
         padding: 0;
         box-shadow: none;
         border-radius: 0;
     }
+
+
 }
 
+
+.is-flexible{ 
+    @media (min-width: 769px){
+        flex: auto;
+        width: calc(100% - 100%);
+    }
+
+}
+
+.is-fixed{ 
+    @media (min-width: 769px){
+        flex: auto;
+        max-width: 680px;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+
+}
+
+
+
+/*
+@media (min-width: 0px)   and (max-width: 426px) {}
+@media (min-width: 427px) and (max-width: 768px) {}
+@media (min-width: 769px) and (max-width: 1280px) {}
+@media (min-width: 1281px) {}
+*/
 
 

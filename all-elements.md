@@ -1,11 +1,13 @@
 ---
-title: All elements
-layout: page
-summary: 
+title: Small page
+layout: page-small
+summary: "Pagina con visualizzazione stretta del layout." 
 menu:
-  name: Elements
+  name: Small Page
 seo: 
-    title: Elements
+    title: Small page
+
+
 ---
 
 # h1: Ipset lorem ipsum

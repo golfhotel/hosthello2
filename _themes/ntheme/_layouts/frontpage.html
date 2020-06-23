@@ -4,6 +4,7 @@ layout: page
         {% assign frontpage = true %}
         
         <!-- frontpage.html --> 
+        {%- comment -%}                                      
         {% if page.section.blackquote %}
         <section class="frontpage-section">
                 <div class="fps-wrap">
@@ -16,14 +17,14 @@ layout: page
                 </div>
         </section>
         {% endif %}
+        {%- endcomment -%} 
         
         <div class="layout-wrapper">
         
-                {{ content }}
+          {{ content }}
                 
-                {% if page.latest_posts %}
-                        <h2>Latest posts</h2>
-                        {% include loop-blog.html %}
-                {% endif %}        
+          {% if page.latest_posts %}      
+            {% include latest_posts.html %}
+          {% endif %}        
         </div>
         <!-- END frontpage.html --> 

@@ -1,8 +1,37 @@
 ---
-layout: page
+layout: base
 ---
-{% assign blog = true %}
 
-        <!-- blog.html --> 
-          {% include loop-blog.html %}
-        <!-- END blog.html --> 
+{%- comment -%} 
+Questo è un file di layout.
+{%- endcomment -%}
+
+
+<!-- blog.html -->
+<main class="layout-main" aria-label="Content">
+    
+    <div class="layout-wrapper">
+    
+    
+    <div> 
+
+        <article >
+
+            {% include page-title.html %}
+
+            {% include featured_posts.html %}
+  
+            {% include all_posts_sort_by_date.html %}
+    
+        </article>
+
+    </div>
+
+        
+
+
+    </div><!-- .layout-wrapper -->
+</main><!-- .layout-main -->
+<!-- END blog.html -->
+
+

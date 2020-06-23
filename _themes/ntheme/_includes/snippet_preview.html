@@ -1,0 +1,210 @@
+
+  {% if jekyll.environment != "production" %}
+
+  <style>
+    .g {
+      margin-top: 0;
+      margin-bottom: 27px;
+      border: solid 1px #ddd;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 5px;
+      padding: 16px;
+      position: relative;
+      background: #fff;
+      overflow-wrap: break-word;
+    }
+    .g * {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal;      
+    }
+
+    .g::before{
+      content: 'snippet preview';
+      position: absolute;
+      bottom: -10px;
+      right: 10px;
+      background: #fff;
+      border-radius: 3px;
+      padding-left: 24px;
+      padding-right: 8px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      font-size: 9px;
+      font-weight: normal;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a4a4a4;
+      border: solid 1px #ddd;
+    }
+
+    .g::after {
+      content: '⦿';
+      color: #D91E36;
+      position: absolute;
+      right: 136px;
+      bottom: 1px;
+      font-size: 13px;
+      background: #fff;
+      padding: 0;
+      line-height: 0;
+    }
+
+    .rc {
+      max-width: 600px;
+    }
+
+    .r{
+      line-height: 1.58;
+      font-size: small;
+    }
+
+    .r h3{
+      font-size: 20px;
+      line-height: 26px;
+      color: #1a0dab;
+      margin-top: 0;
+    margin-bottom: 3px;
+      
+    }
+    .iUh30{
+      color: #006621;
+      font-size: 16px;
+      font-style: normal;
+    }
+    .s{
+      line-height: 1;
+    }
+    .st {
+      font-size: 14px;
+      line-height: 22.1167px;
+    }
+    .label-length{
+      /*background: #545454;*/
+      font-size: 12px;
+    }
+    .label-length strong {font-weight: bold; }
+
+    .light-signal {
+      margin-left: -17px;
+      margin-right: -17px;
+      margin-bottom: -17px;
+      padding: 17px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 15px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top: solid 1px #ddd;
+      background: #fafafa;
+      border: solid 1px #ddd;
+    }
+
+    .percorso-file{
+        font-size: 12px;
+        margin-left: -17px;
+        background: #ffffff;
+        margin-bottom: -10px;
+        padding: 17px;
+        padding-bottom: 8px;
+        padding-top: 10px;
+        margin-right: -17px;
+        margin-top: 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top: solid 1px #ddd;
+    }
+
+    .percorso-file strong {
+        font-weight: bold;
+    }
+
+  </style>
+
+  <div class="g" >
+    <div class="rc">
+      <div class="r">
+        {% if page.seo.title %}
+          {% assign tit = page.seo.title | strip %}
+        {% else %}
+          {% assign tit = page.title | strip %}
+        {% endif %}
+        
+        <h3>{{ tit }}</h3>
+        
+        <cite class="iUh30">{{site.url}}{{ page.url }}</cite>
+      </div>
+      <div class="s">
+        {% assign sum = page.summary | strip %}
+        {% if sum == empty  %}
+          <span class="st">Nessuna descrizione</span>  
+        {% else %}
+          <span class="st">{{ page.summary }}</span> 
+        {% endif %}
+      </div>
+    </div>
+
+
+   <div class="light-signal">
+      {% assign valuesize_a = tit | size %}
+      <span style="{% if valuesize_a >= 50 and valuesize_a <= 60 %}
+                      color: green;
+                   {% else %}
+                      color: red;
+                    {% endif %}">⚫</span>
+
+      <span class="label-length">
+        <strong>Titolo:</strong> numero caratteri <strong>{{ valuesize_a }}</strong> (consigliati 50~60)</span> 
+      
+      <br>
+      {% assign valuesize_b = sum | size %}
+      <span style="{% if valuesize_b >= 155 and valuesize_b <= 160 %}
+                    color: green;
+                  {% else %}
+                    color: red;
+                  {% endif %}">⚫</span>
+      <span class="label-length"><strong>Descrizione:</strong>  numero caratteri <strong>{{ valuesize_b }}</strong> (consigliati 155~160)</span>
+      
+      <br>
+
+      {% if page.layout == 'page' or 
+            page.layout == 'page-sidebar' or
+            page.layout == 'page-small' or
+            page.layout == 'post' %}
+
+        {% assign valuesize_c = content %}
+        {% assign valuesize_c = valuesize_c | number_of_words %}
+        <span style="{% if valuesize_c >= 450 %}
+                        color: green;
+                    {% else %}
+                        color: red;
+                    {% endif %}">⚫</span>
+        <span class="label-length"><strong>Contenuto:</strong> numero parole <strong>{{ valuesize_c }}</strong> (consigliati 450+)</span>      
+
+        {% assign valuesize_a = nil %} 
+        {% assign valuesize_b = nil %} 
+        {% assign valuesize_c = nil %}   
+        
+      {% endif %}
+
+      <div class="percorso-file">
+        <span><strong>Percorso file:</strong> {{page.path}}</span><br>
+        <span><strong>Layout in uso:</strong> {{ page.layout }}</span><br>
+        <span><strong>Immagine featured: </strong>
+            {% if page.featured.image_from_url %}
+                {{ page.featured.image_from_url }}
+            {% elsif site.featured.image %}
+                Nessuna
+            {% else %}
+                {{ page.featured.image_from_url }}        
+            {% endif %}
+        </span>
+        
+      </div>
+      
+ 
+    </div> 
+    
+    
+    
+  </div>
+  {% endif %}

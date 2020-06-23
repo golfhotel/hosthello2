@@ -1,6 +1,6 @@
 ---
 title: 					Web development and programming pills
-layout: 				page
+layout: 				blog
 summary: 
 permalink:
 menu: 		

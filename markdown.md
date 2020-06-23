@@ -1,6 +1,12 @@
 ---
-title: Markdown Unit Test
-summary: Insieme di parti per testare gli elementi Markdown.
+title: Pagina con Sidebar
+layout: page-sidebar
+summary: Pagina con sidebar usata come test per la visualizzazione.
+menu:
+  name: Sidebar Page
+seo: 
+    title: Pagina con Sidebar
+sidebar: true
 ---
 # Mou
 

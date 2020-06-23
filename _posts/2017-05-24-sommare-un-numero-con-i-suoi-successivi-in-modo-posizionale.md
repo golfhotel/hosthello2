@@ -3,8 +3,8 @@ title: Sommare un numero con i suoi successivi in modo posizionale.
 layout:     post
 date:       2017-09-19
 author:     Mr. Jim
-categories: linguaggio c
-summary:  
+categories: [html, enviroment, linguaggio c]
+summary:  "Ora, conosco la somma totale dei numeri in posizione pari. Se scansiono l’array andando con l’indice solo sui numeri pari, posso trovare la uipse loremaaaa"
 # Permalink:
 add_to_top_menu:    no
 add_to_bottom_menu: no
@@ -20,13 +20,12 @@ seo:
 latest_posts:   yes
 featured: 
   show: yes
-  image: https://drscdn.500px.org/photo/1005244079/q%3D80_m%3D1500/v2?sig=7930b1775aa3be09b2e384cc91d6376394ec7d02f207b14ac2e6f2166a1ecf80
+  image_from_url: "https://images.unsplash.com/photo-1588595189116-6e5c7ecc9e86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80"
 ---
 
 Per ogni numero in un array di interi, 
 
 * se il numero è nella posizione corrente **dispari** dovrà essere sommato con i suoi **successivi in posizione dispari**.
-
 * se il numero è nella posizione corrente **pari** dovrà essere sommato con i suoi **successivi in posizione pari**
 
 ```

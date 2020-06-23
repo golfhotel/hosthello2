@@ -1,0 +1,42 @@
+
+
+<!-- Jooo -->
+<div class="featured-posts">
+    <div class="tile-wall">
+
+        <ul class="tile-wrapper">
+
+            {% assign count_all = 0 %}
+            
+            {% for post in site.posts %}
+
+            {% if post.featured.show %}
+                {% assign count_all = count_all | plus: 1 %}
+            {% endif %}
+
+            {% endfor %}
+
+
+            {% assign counter = 0 %}
+            {% assign statuslast = false %}
+            
+            {% for post in site.posts %}
+
+            {% if post.featured.show %}
+                {% assign counter = counter | plus: 1 %}
+
+                {% if counter == count_all %}
+                {% assign statuslast = true %}
+                {% endif %}
+
+                {% include posts.html length=count_all cardinal=counter lastpost=statuslast %}
+            {% endif %}
+                
+            {% endfor %} 
+            {% assign counter = nil %}
+            {% assign statuslast = nil %}
+
+        </ul>
+    </div>
+</div>
+    <!-- Kooo -->

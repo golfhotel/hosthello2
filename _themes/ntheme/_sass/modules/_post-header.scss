@@ -1,0 +1,89 @@
+
+
+.post-header {
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+}
+
+.post-meta {
+  font-size: 1em;
+  color: #565656;
+
+  @media (min-width: 0px)   and (max-width: 768px) {
+    margin-bottom: 1em;
+  }
+
+  @media (min-width: 769px) {
+    display: inline-block;
+  }
+  
+}
+  
+.post-categories {
+    @media (min-width: 769px) {
+      display: inline-block;
+    }
+}
+
+.post-categories a {
+    @media (min-width: 0px)   and (max-width: 768px) {
+      border-radius: .5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 1.7em;
+      padding-bottom: 1.6em;
+      color: #555555;
+      border: solid 1px #e6e6e6;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: .6em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-right: -.5em;
+      box-shadow: 0px 0px 2px 0px #dcdcdc;
+    }
+  
+    @media (min-width: 769px) {
+        position: relative;
+        color: #ffffff;
+        background: linear-gradient(0deg, #545454, #838383);
+        padding-left: .5em;
+        padding-right: .5em;
+        padding-bottom: .2em;
+        padding-top: .1em;
+        font-weight: 100;
+        border-top-right-radius: .6em;
+        border-bottom-right-radius: .6em;
+        font-size: .8em;
+        background-clip: padding-box; /* !importanté */
+        border: solid 5px transparent; /* !importanté */
+        z-index: 100;
+        top: -2px;
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -99;
+            margin-left: -8px; /* !importanté */
+            border-top-left-radius: .2em; /* !importanté */
+            border-bottom-left-radius: .2em; /* !importanté */
+            background: linear-gradient(to bottom, #6bd8ff, #006488);
+            width: 8px; /* IE */
+          }
+    }
+  }
+
+.post-categories:before {
+    @media (min-width: 769px) {
+      content: '•';   
+      color: #565656;
+      margin-left: .3em;
+      padding-right: .3em;
+    }
+}
+
+.post-image {
+  margin-top: 2em;
+}

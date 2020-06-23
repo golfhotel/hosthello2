@@ -11,13 +11,13 @@
 @import
   "layout/header",
   "layout/main",
-  "layout/sidebar",
   "layout/footer",
   "layout/forms";
 
 @import
   "modules/navigation",
   "modules/page-header",
+  "modules/post-header",
   "modules/wrapper",
   "modules/tile",
   "modules/featured-posts", 
@@ -25,5 +25,5 @@
 
 @import
   "nthemes/base",
-  "nthemes/layout";
-//  "nthemes/syntax-highlighting";
+  "nthemes/layout",
+  "nthemes/syntax-highlighting";

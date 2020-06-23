@@ -3,7 +3,7 @@ title: Array e puntatori
 layout:     post
 date:       2017-05-27
 author:     Mr. Jim
-categories: linguaggio c
+categories: [linguaggio c]
 summary:    Un'introduzione su come array e puntatori lavorano tra loro.
 latest_posts:   yes
 featured:       no

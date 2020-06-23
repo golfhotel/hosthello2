@@ -2,10 +2,10 @@
 layout: post
 title:  "Come si usa la funzione rand()"
 date:   2017-02-11
-categories: linguaggio c
+categories: [linguaggio c]
 summary: Capire la funzione rand() con spiegazione e semplici esempi.  
 featured:
-  show: yes
+  show: true
 ---
 
 Per usare ```rand()``` bisogna inizializzare (basta una volta) il "generatore di numeri random".

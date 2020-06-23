@@ -2,7 +2,7 @@
 layout: post
 title:  Puntatori e array di caratteri
 date:   2017-01-24
-categories: linguaggio c
+categories: [linguaggio c]
 summary: Note sulla distinzione tra puntatori a caratteri e array di caratteri.  
 ---
 

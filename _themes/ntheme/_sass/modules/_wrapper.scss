@@ -1,4 +1,7 @@
 
+/* -----------------------------
+* LAYOUT WRAPPER
+*------------------------------------------*/
 
 .layout-wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -9,8 +12,49 @@
   padding-left: 5%;
   overflow: hidden;
 
+  @media (min-width: 427px) and (max-width: 768px) {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+
+  @media (min-width: 1281px)  {
+    max-width: 950px;
+  }
+  /*
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
   }
+  */
 }
+
+.layout-post .layout-wrapper{
+  
+  max-width: 100%;
+
+  @media (min-width: 1281px)  {
+    max-width: 1080px;
+    max-width: 960px;
+  }
+}
+
+.flex-it {
+  @media (min-width: 769px)  {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+}
+
+
+/*
+@media (min-width: 0px)   and (max-width: 426px) {}
+@media (min-width: 427px) and (max-width: 768px) {}
+@media (min-width: 769px) and (max-width: 1280px) {}
+@media (min-width: 1281px) {}
+*/

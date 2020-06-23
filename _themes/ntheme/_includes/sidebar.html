@@ -1,0 +1,29 @@
+
+
+{% if page.sidebar %}
+<aside class="layout-sidebar">
+
+  <h2>Sidebar</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Harum deserunt sed itaque molestiae libero quibusdam, doloremque 
+    animi corporis laborum unde nihil molestias possimus ea. 
+    Provident nihil modi aspernatur hic consequatur?</p>
+    
+    {% if page.sidebar.related_posts or page.sidebar.related_posts == "enable" %}
+      {% include related-posts.html %}  
+    {% endif %} 
+      
+      {% for a in page.sidebar %}
+        {% for b in a %}
+          <h3>[{{forloop.index}}] : {{ b[0] }} - {{ b[1] }}</h3>
+          {% if b[0] %}
+            <h4>{{forloop.index}} : {{ b[0] }}</h4>
+          {% endif %}
+          {% if b.subtitle %}
+            <h4>{{forloop.index}} : {{ b.subtitle }}</h4>
+          {% endif %}            
+        {% endfor %}
+      {% endfor %}
+      
+</aside>
+{% endif %}

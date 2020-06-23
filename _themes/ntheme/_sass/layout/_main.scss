@@ -1,7 +1,84 @@
+
+
+/*
+@media (min-width: 0px)   and (max-width: 426px) {}
+@media (min-width: 427px) and (max-width: 769px) {}
+@media (min-width: 769px) and (max-width: 1280px) {}
+@media (min-width: 1281px) {}
+*/
+
+
 .layout-main {
-    display: block; /* IE */
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    background: #fff;
-    overflow: hidden;
+
+    @media (min-width: 0px)   and (max-width: 426px) {
+        display: block; /* IE */
+        padding-top: 1.5em;
+        padding-bottom: 2rem;
+        background: #fafafa;
+        overflow: hidden;
+        
+    }
+
+
+
+    @media (min-width: 427px) and (max-width: 768px) {
+        display: block; /* IE */
+        padding-top: 1.5em;
+        padding-bottom: 2rem;
+        background: #fafafa;
+        overflow: hidden;        
+    }
+
+
+
+    @media (min-width: 769px) and (max-width: 1280px) {
+        display: block; /* IE */
+        padding-top: 1.5em;
+        padding-bottom: 2rem;
+        background: #fff;
+        overflow: hidden;        
+    }    
+
+    @media (min-width: 1281px) {
+        display: block; /* IE */
+        padding-top: 1.5em;
+        padding-bottom: 2rem;
+        background: #fff;
+           
+    }        
 }
+
+
+
+
+
+.post-container {
+    /* width: 700px; */
+   /* -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto  ;
+    -ms-flex: auto;
+    flex: auto;
+    */
+}
+
+.page-container{
+    -webkit-box-flex: 0 0 100%;
+    -moz-box-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+
+}
+
+
+
+.layout-sidebar {
+    @media (min-width: 769px){
+      width: 28%;
+      padding: 0 4%;
+    }
+
+}
+
+

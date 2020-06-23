@@ -56,8 +56,7 @@ p {
 
 // Images
 img {
-    //max-width: 100%;
-    width: 100%;
+    max-width: 100%;
     vertical-align: middle;
 }
 
@@ -82,8 +81,10 @@ li {
 // =============================================================================
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: $base-font-weight;    
+     
+    color: #595758; 
+    margin-top: .6em;
+    font-family: 'Quitador Sans Pro';
 }
 
 
@@ -135,7 +136,7 @@ code {
     font-size: 13px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #f7f7f7;
 }
 
 code {

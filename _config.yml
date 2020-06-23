@@ -14,13 +14,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+lang: it
 title: Hosthello
 email: info@hosthello.com
 description: >  # this means to ignore newlines 
   Hosthello sviluppa progetti web con le tecnologie più recenti.
 
 # usato quando si lancia il comando "JEKYLL_ENV=production jekyll serve --host=[ip-address]"
-url: "https://9ef1e470.ngrok.io"  # the base hostname & protocol for your site
+# url: "https://7350a70d.ngrok.io"
+url: "http://192.168.10.10:4000"  # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # social informations
@@ -42,6 +44,16 @@ permalink:         /:collection/:title
 # Necessaria per il corretto funzionamento del tema.
 # --------------------------------------------------
 theme: ntheme
+
+# https://github.com/jekyll/jekyll-archives
+plugins:
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive-category
+
 
 # path dell'immagine logo 
 logo: 
@@ -77,16 +89,16 @@ defaults:
       author:       "Mr. Jack"
       featured:
         show:        false
-        image:       assets/gh-img.png
+        image:       /assets/default.jpg
       categories:    ""
       summary:       ""
       keywords:      ""
       seo:
         title:
-        summary: ""
+        summary:     ""
         keywords:    ""
       postimg: 
-        default:     assets/gh-img.png
+        default:     /assets/default.jpg
         image:
   -
     scope:
@@ -108,7 +120,7 @@ defaults:
       path:          "frontpage.html"        # empty string for all files
       type:          "pages"
     values:
-      layout:        "default"
+      layout:        "page"
       section:
         blackquote: 
         cite: 

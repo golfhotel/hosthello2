@@ -1,0 +1,23 @@
+{%- comment -%}
+File: latest_posts.html
+{%- endcomment -%}
+
+<div class="tile-wall" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="tile-category__title">
+      <h2 class="tile-category__title--head">Ultimi post pubblicati</h2>
+    </div>
+    
+    <ul class="tile-wrapper">
+      {% assign counter = 0 %}
+     
+      {% for post in site.posts limit: 5 %}
+        {% assign counter = counter | plus: 1 %}
+
+        {% include posts.html length=5 cardinal=counter lastpost=forloop.last %}
+      {% endfor %}
+    </ul>
+  
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ " feed.xml"="" |="" prepend:="" site.baseurl="" }}"="">via RSS</a></p>-->
+        
+</div> <!-- latest_posts.html --> 

@@ -1,0 +1,27 @@
+- name: Outside
+  description: Description
+  tasks:
+  - type: Food
+    name: Eat it outside
+    status: working
+  - type: Drinks
+    name: Drink it outside
+    status: working
+- name: Inside
+  description: Description
+  tasks:
+  - type: Food
+    name: Eat it inside
+    status: pending
+  - type: Drinks
+    name: Drink it inside
+    status: working
+- name: Roof
+  description: Description
+  tasks:
+  - type: Food
+    name: Eat it inside
+    status: pending
+  - type: Drinks
+    name: Drink it inside
+    status: working

@@ -5,14 +5,15 @@ layout: base
 
     <!-- page.html -->
     <main class="layout-main" aria-label="Content">
+      {% if page.layout != "frontpage" %}
         <div class="layout-wrapper">
           
-          {% include snippet_preview.html %}
-
+      {% endif %}       
+      
+        {% if page.layout != "frontpage" %}
         <div class="flex-it"> 
           <article class="page-container">
             {% include page-title.html %}
-  
             {{ content }}
       
           </article>
@@ -22,8 +23,16 @@ layout: base
         </div>
 
           
-  
+        {% else %}
+      
+        {{ content }}            
+        {% endif %}
+        
+
+
+      {% if page.layout != "frontpage" %}
         </div><!-- .layout-wrapper -->
+      {% endif %}
     </main><!-- .layout-main -->
     <!-- END page.html -->
 

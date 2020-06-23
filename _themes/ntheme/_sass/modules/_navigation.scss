@@ -127,7 +127,7 @@
 
 
 // Miniaturizza il logo quando il menù viene aperto nella frontpage 
-.isFrontpage > input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > .logo {
+.layout-frontpage > input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > .logo {
     position: absolute;
     top: 0;
     left: 1rem;

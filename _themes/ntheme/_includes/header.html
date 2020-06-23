@@ -50,11 +50,21 @@
 
 </header><!-- .layout-header -->
 
+
+
 {% if jekyll.environment != "production" %}
-<div style="
+<div class="env-dev">
+    <span>
+      Enviroment: <a href="https://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time" target="_blank">{{ jekyll.environment }}</a>
+    </span> 
+</div>
+
+<style>
+  .env-dev > span {
+    display: none;
     background: yellow;
     font-family: arial;
-    font-size: .7em;
+    font-size: .55em;
     font-weight: bold;
     padding-bottom: .6em;
     padding-left: 5%;
@@ -62,7 +72,36 @@
     padding-top: .6em; 
     text-align: center;
     text-transform: uppercase;
-    width: 90%; 
-    ">
-    Enviroment: <a href="https://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time" target="_blank">{{ jekyll.environment }}</a></div>
+    width: auto;
+    position: fixed;
+    transform: rotate(-90deg);
+    bottom: 96px;
+    left: -97px;
+    padding-right: 20px;
+    padding-left: 20px;
+    letter-spacing: 2px;     
+  }
+  .env-dev:hover > span  {
+    display: inline;
+   
+  }
+  .env-dev::before{
+    content: '⦿';
+    position: fixed;
+    font-size: 1.5em ;
+    bottom: 0;
+    left: 0;
+    color:#D91E36;
+    display: inline;
+    padding: 5px 10px;
+    border-top-right-radius: 5px;
+  }
+
+  .env-dev:hover:before {
+    display: none;
+  }
+
+</style>
+
+
 {% endif %}
