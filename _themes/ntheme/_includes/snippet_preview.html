@@ -6,7 +6,7 @@
       margin-top: 0;
       margin-bottom: 27px;
       border: solid 1px #ddd;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Segoe UI","Segoe UI Symbol","serif","sans-serif";
       border-radius: 5px;
       padding: 16px;
       position: relative;
@@ -14,14 +14,13 @@
       overflow-wrap: break-word;
     }
     .g * {
-      font-family: Arial, Helvetica, sans-serif;
       font-weight: normal;      
     }
 
     .g::before{
       content: 'snippet preview';
       position: absolute;
-      bottom: -10px;
+      bottom: -10.5px;
       right: 10px;
       background: #fff;
       border-radius: 3px;
@@ -41,7 +40,7 @@
       content: '⦿';
       color: #D91E36;
       position: absolute;
-      right: 136px;
+      right: 127px;
       bottom: 1px;
       font-size: 13px;
       background: #fff;
@@ -63,7 +62,8 @@
       line-height: 26px;
       color: #1a0dab;
       margin-top: 0;
-    margin-bottom: 3px;
+      margin-bottom: 3px;
+      font-family: "Segoe UI","Segoe UI Symbol","serif","sans-serif";
       
     }
     .iUh30{
@@ -153,7 +153,7 @@
                     {% endif %}">⚫</span>
 
       <span class="label-length">
-        <strong>Titolo:</strong> numero caratteri <strong>{{ valuesize_a }}</strong> (consigliati 50~60)</span> 
+        <strong>Titolo:</strong> numero caratteri <strong>{{ valuesize_a }}</strong> (consigliati 50-60)</span> 
       
       <br>
       {% assign valuesize_b = sum | size %}
@@ -162,7 +162,7 @@
                   {% else %}
                     color: red;
                   {% endif %}">⚫</span>
-      <span class="label-length"><strong>Descrizione:</strong>  numero caratteri <strong>{{ valuesize_b }}</strong> (consigliati 155~160)</span>
+      <span class="label-length"><strong>Descrizione:</strong>  numero caratteri <strong>{{ valuesize_b }}</strong> (consigliati 50-160)</span>
       
       <br>
 
@@ -191,14 +191,23 @@
         <span><strong>Layout in uso:</strong> {{ page.layout }}</span><br>
         <span><strong>Immagine featured: </strong>
             {% if page.featured.image_from_url %}
-                {{ page.featured.image_from_url }}
-            {% elsif site.featured.image %}
-                Nessuna
+              <a href="{{ page.featured.image_from_url }}" target="_blank">
+                {{ page.featured.image_from_url  | truncate: 80 }}
+              </a>  
+              
+            {% elsif page.featured.image %}
+                {{ page.featured.image }}
             {% else %}
-                {{ page.featured.image_from_url }}        
+                Nessuna
             {% endif %}
-        </span>
-        
+        </span><br>
+        <span><strong>➥Visualizza nel post:</strong> 
+          {% if page.featured.show %}
+            Si
+          {% else %}
+            No
+          {% endif %}
+        </span><br>
       </div>
       
  

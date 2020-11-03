@@ -1,6 +1,18 @@
 ---
 title: Lista di elementi concatenati semplici
 layout: post
+date: 2020-01-03
+author: Ivan Garrini
+categories: [linguaggio c]
+summary: Come settare un corretto ambiente di sviluppo.  
+featured:
+  show: false
+  image: ""
+  image_from_url: "https://images.unsplash.com/photo-1587287720754-94bac45f0bff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_alt: "Sono l'alt dell'immagine"
+  image_title: "Sono il title dell'immagine"
+sidebar: false 
+latest_posts:   yes
 ---
 
 La lista di elementi concatenate semplici sono un insieme di nodi dove ogni nodo è inteso come elemento della lista. 

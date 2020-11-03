@@ -94,19 +94,7 @@
 }
 
 
-// Manage menù input beaviour in other page 
-// =============================================================================
 
-// Hide checkbox
-input[id=show-menu]{
-    display: none;
-}
-
-//Show menu when invisible checkbox is checked
-input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > #menu > ul{
-    display: block;
-    overflow: scroll;
-}
 
 
 

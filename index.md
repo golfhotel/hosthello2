@@ -1,7 +1,7 @@
 ---
-title: 					Web development and programming pills
+title: 					Sviluppo web e pillole di programmazione
 layout: 				blog
-summary: 
+summary:                Articoli e informazioni per sviluppatori
 permalink:
 menu: 		
   top:					no # (yes | no - default: yes) 

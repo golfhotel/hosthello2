@@ -33,14 +33,16 @@
       padding-top: 1.7em;
       padding-bottom: 1.6em;
       color: #555555;
-      border: solid 1px #e6e6e6;
       font-weight: 600;
-      letter-spacing: 2px;
-      font-size: .6em;
+      letter-spacing: .05rem;
+      font-size: .53rem;
       text-transform: uppercase;
       display: inline-block;
-      margin-right: -.5em;
-      box-shadow: 0px 0px 2px 0px #dcdcdc;
+      box-shadow: 0px 0px 8px 0px #d6d6d6;
+      background: linear-gradient(180deg, #fafafa, #ececec);
+      margin-right: .02rem;
+      font-family: "Segoe UI","Segoe UI Symbol","serif","sans-serif", "Roboto";
+      font-weight: bold;
     }
   
     @media (min-width: 769px) {
@@ -57,7 +59,7 @@
         font-size: .8em;
         background-clip: padding-box; /* !importanté */
         border: solid 5px transparent; /* !importanté */
-        z-index: 100;
+        z-index: 3;
         top: -2px;
 
 

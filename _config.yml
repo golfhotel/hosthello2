@@ -52,7 +52,7 @@ plugins:
 jekyll-archives:
   enabled:
     - categories
-  layout: archive-category
+  layout: archive-category # _layouts/archive-category.html
 
 
 # path dell'immagine logo 

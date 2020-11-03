@@ -3,10 +3,19 @@ title: Come gestire le stringhe con getchar
 title_in_home: Gestire le stringhe con getchar
 date: 2016-08-22 12:00:00
 layout: post
+author: Ivan Garrini
 summary: Aquisita una stringa digitata dall'utente, verrà controllata per determina se contiene al massimo due caratteri uguali di seguito.
-featured: 
-  show: yes
+categories: [linguaggio c]
+featured:
+  show: false
+  image: ""
+  image_from_url: "https://images.unsplash.com/photo-1534437829740-62aafbc12037?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_alt: "Sono l'alt dell'immagine"
+  image_title: "Sono il title dell'immagine"
+sidebar: false 
 ---
+
+![gestire le stringhe con getchar](https://images.unsplash.com/photo-1534437829740-62aafbc12037?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70 "gestire le stringhe con getchar")
 
 Tramite un esempio vedremo come gestire le stringhe usando la funzione `getchar()` della libreria `stdio.h`. Aquisita una stringa digitata dall'utente, verrà controllata per determina se contiene al massimo due caratteri uguali di seguito. 
 

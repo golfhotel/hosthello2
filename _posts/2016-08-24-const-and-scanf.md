@@ -2,11 +2,12 @@
 title: Variabile constante e scanf()
 date: 2016-08-24 12:00:00
 layout: post
-author: 
+author: Ivan Garrini
+category: [linguaggio c]
 summary: Un tipico esempio di come la compilzione non è sempre efficace per prevenire errori. Usando scanf() andremo a capire meglio la problematica.
 featured:
   image: 
-  image_from_url: https://pbs.twimg.com/profile_images/519367942866104320/PB96rDH_.png
+  image_from_url: "https://images.unsplash.com/photo-1539186607619-df476afe6ff1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
 ---
 
 **Esempio 1.** Il codice seguente dichiara e "inizializza" la variabile intera number con il valore 42. La parola `const` (che tecnicamente si chiama **qualificatore**) serve per dire al compilatore che la variabile avrà un valore costante durante l'esecuzione del programma. 

@@ -3,8 +3,8 @@ title: Sommare un numero con i suoi successivi in modo posizionale.
 layout:     post
 date:       2017-09-19
 author:     Mr. Jim
-categories: [html, enviroment, linguaggio c]
-summary:  "Ora, conosco la somma totale dei numeri in posizione pari. Se scansiono l’array andando con l’indice solo sui numeri pari, posso trovare la uipse loremaaaa"
+categories: [linguaggio c]
+summary:  "Prova a capire come il linguaccio C usa la somma posizionale."
 # Permalink:
 add_to_top_menu:    no
 add_to_bottom_menu: no
@@ -19,7 +19,7 @@ seo:
 #   exclude: yes
 latest_posts:   yes
 featured: 
-  show: yes
+  show: false
   image_from_url: "https://images.unsplash.com/photo-1588595189116-6e5c7ecc9e86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80"
 ---
 

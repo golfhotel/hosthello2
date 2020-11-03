@@ -21,9 +21,7 @@
 
 .logo{
     position: relative;
-    
-    @include media-query(768px){
-        margin-left: 0;
-        float: left;
-    }                    
+    margin-left: 0;
+    float: left;
+                      
 }

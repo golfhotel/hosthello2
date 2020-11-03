@@ -26,7 +26,9 @@
   <meta name="keywords" content="{{ keywords }}">
 
   <link rel="stylesheet" href="{{ "/assets/style.css" | prepend: site.baseurl | prepend: site.url }}">
-
+	<link rel="preload" href="//assets/fonts/quitador-sans-pro/80917868752bd1c18ced0770abfdd39e.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="//assets/fonts/roboto/roboto-v20-latin-300.woff2" as="font" crossorigin="anonymous" />
+  
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   

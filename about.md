@@ -1,23 +1,24 @@
 ---
-layout: page
-title: "Layout: Page"
-summary: "Il layout Page visualizza il layout della pagina largo."
+title: Chi siamo
+layout: page-sidebar
+summary: "Brevi infrormazioni su chi siamo e cosa facciamo"
 menu: 
-  name: Page normal
+  name: Chi siamo
 seo: 
-  title: Page normal
+  title: Chis siamo
+sidebar: true
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hosthello è una realtà giovane, ben formata e con la voglia di partecipare al progredire dell'era informatica. È un progetto che nasce dalla passione di un gruppo di sviluppatori, web designer, studenti di informatica ed appassionati del web.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+![alt text](https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80 "Logo Title Text 1")
 
-You can find the source code for Jekyll at GitHub:
+Chi segue questo progetto lo fa considerando i nuovi prodotti presenti nell'ecosfera del **web development**.
 
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+>"Sviluppare progetti web con le tecnologie più potenti è la base di un prodotto vincente e duraturo." 
 
-[jekyll-organization]: https://github.com/jekyll
+Tra le nostre azioni previste per il futuro, mettiamo in conto la possibilità di far collaborare al nostro progetto chiunque ne abbia interesse. 
 
+![alt text](https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=780 "Logo Title Text 1")
+
+Seguici, così da non perdere l'occasione di partecipare. Presto pubblicheremo degli aggiornamenti. **Stay tuned!**

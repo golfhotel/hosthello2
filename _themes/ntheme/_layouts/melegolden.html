@@ -3,78 +3,177 @@ layout: page
 ---
 
 {%- comment -%}
-Lavora insieme al plug-in archive category
-https://github.com/jekyll/jekyll-archives
+| --------------------------------------------------------------------
+| VIEWS ARCHIVIO DI TUTTE LE CATEGORIE
+| --------------------------------------------------------------------
+|
+| Questo è il file VIEW che gestisce come visualizzare la pagina 
+| di archivio di TUTTE le categorie esistenti. Vengono mostrate tutte le 
+| categorie esistenti associate ad un post.
+| 
+| Dipendenze: richiede il plug-in "archives" che abilita l'uso di:
+|             - site.categories che contiene tutte le categorie
+|               associate a tutti i post. 
+|             - post.categories che contiene le categorie associate al 
+|               singolo post.
+|             Fonte: https://github.com/jekyll/jekyll-archives
+|
+| --------------------------------------------------------------------
 {%- endcomment -%}
 
 {{ content }}
 
 <div class="tile-wall" itemscope="" itemtype="http://schema.org/BlogPosting">
 
-{%- comment -%}  
+
+  {%- comment -%} Usato se si vuole visualizzare la lista categorie 
   {% for category in site.categories %}
-  <h4><a class="" href="{{ category | first }}">{{ category[0] }}</a></h4>
+   <ul>
+    <li><a class="" href="{{site.url}}/category/{{ category | first | replace: " ", "-" }}">
+      {{ category[0] }}
+    </a></li>
+  </ul>
   {% endfor %}
-{%- endcomment -%}
+  {%- endcomment -%} 
 
+
+
+  {%- comment -%} 
+  |-----------------------------------------------
+  | VERIFICO ESITENZA CATEGORIA/E
+  |-----------------------------------------------  
+  | Verifico l'esistenza di categoria/e inizializzando
+  | a 0 (false) una variabile e ponendola a 1 (true) se
+  | esiste almeno una categoria.
+  {%- endcomment -%} 
+  {% assign esisteCategoria = 0 %}
   {% for category in site.categories %}
-  <div class="tile-category">
-    <div class="tile-category__title">
-      <h2 class="tile-category__title--head">Categoria: {{ category[0] }}</h2>
-    </div>  
-  
-    <ul class="tile-wrapper">
-      {% for post in category[1] limit: 3 %}
-        {% include posts.html  %}
-      {% endfor %}
-    </ul>
-
-    <div class="tile-category__show-all">
-      <a href="{{ category | first | replace: " ", "-" }}" title="Guarda tutti i post di {{ category | first }} ">
-        Mostra tutto
-      </a>
-    </div>
-  </div>
+    {% if category != empty %}
+      {% assign esisteCategoria = 1 %}
+    {% endif %}
   {% endfor %}
 
 
 
-  {%- comment -%} Conto i posts senza categoria. {%- endcomment -%}
-    {% assign end = 0 %}
-    {% for post in site.posts %}      
-      {% if post.categories == empty %}
-        {% assign end = end | plus: 1 %}
-      {% endif %}
-    {% endfor %}
+
+
+  {%- comment -%} 
+  |-----------------------------------------------
+  | GESTIONE POST CON CATEGORIA
+  |-----------------------------------------------
+  | Qui viene gestito come visualizzare i post che
+  | appartengono ad una categoria.
+  |-----------------------------------------------
+  {%- endcomment -%}
+
+
+  {%- comment -%} 
+  | Se esiste una o più categori (1=true) la 
+  | visualizzo con i suoi relativi post correlati.
+  {%- endcomment -%} 
+  {% if esisteCategoria == 1 %}
+      
+    {% for category in site.categories %}
+    <div class="tile-category">
+      <div class="tile-category__title">
+        <h2 class="tile-category__title--head">Categoria: {{ category[0] }}</h2>
+      </div>  
     
-    {%- comment -%} Per ogni post  {%- endcomment -%}
-    {% assign count = 0 %}
-    {% for post in site.posts %}      
+      <ul class="tile-wrapper">
+        {% for post in category[1] limit: 9 %}
+          {% include posts.html  %}
+        {% endfor %}
+      </ul>
 
-      {% if post.categories == empty %}
+      <div class="tile-category__show-all">
+        <a href="{{site.url}}/category/{{ category | first | replace: " ", "-" }}" title="Guarda tutti i post di {{ category | first }} ">
+          Mostra tutto
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+ 
+  {% endif %}
 
-        {%- comment -%}Visualizzo titolo una sola volta{%- endcomment -%}
-        {% if count == 0 %}
+
+
+
+
+  {%- comment -%} 
+  |-----------------------------------------------
+  | GESTIONE POST SENZA CATEGORIA
+  |-----------------------------------------------
+  | Qui viene gestito come visualizzare i post che
+  | non appartengono a nessuna categoria per cui 
+  | hanno il campo "post.categories == empty"
+  |-----------------------------------------------
+  {%- endcomment -%}
+
+
+  {%- comment -%} 
+  | Stampo un messaggio se non esistono categorie.
+  {%- endcomment -%}
+  {% if esisteCategoria == 0 %}
+    <p>
+      <strong>Nota: </strong>al momento sono presenti solo <strong>post senza categoria</strong>;
+      presto verranno categorizzati.
+    </p>
+  {% endif %} 
+
+  
+  {%- comment -%} 
+  | Conto quanti post sono senza categoria.
+  | Inizializzo una variabile che, ad ogni iterazione
+  | svolta su tutti i post esistenti, viene incrementata 
+  | quando un post ha la categoria vuota. La variabile 
+  | servirà successivamente per fermare un ciclo for.
+  {%- endcomment -%}
+  {% assign totaleNumeroPostSenzaCategoria = 0 %}
+  {% for post in site.posts %}      
+    {% if post.categories == empty %}
+      {% assign totaleNumeroPostSenzaCategoria = totaleNumeroPostSenzaCategoria | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+    
+
+  {%- comment -%} 
+  | Visualizzo elenco dei post senza categoria.
+  | Per ogni post esistente, se il post ha la categoria
+  | vuota lo visualizzo. Assegno una variabile per 
+  | visualizzare una sola volta il titolo della categoria
+  | durante l'iterazione del for e per gestire la 
+  | chiusura del tag html <ul>.
+  {%- endcomment -%}
+  {% assign count = 0 %}
+  {% for post in site.posts %}      
+
+    {% if post.categories == empty %}
+
+      {%- comment -%} Visualizzo titolo categoria una sola volta {%- endcomment -%}
+      {% if count == 0 %}
         <div class="tile-category">
           <div class="tile-category__title">
-            <h2 class="tile-category__title--head">Categoria: Nessuna</h2>
+            <h2 class="tile-category__title--head">Post senza categoria</h2>
           </div>
           <ul class="tile-wrapper">
-        {% endif %}
-
-        {% assign count = count | plus: 1 %}
-        
-        {% include posts.html  %}
-        
-
-        {% if count == end %}
-          </ul>
-        </div>
-        {% endif %}
+      {% endif %}
+      
+      {%- comment -%} Incremento la variabile {%- endcomment -%}
+      {% assign count = count | plus: 1 %}
+      
+      {%- comment -%} Visualizza il post senza categoria come un <li></li> {%- endcomment -%}
+      {% include posts.html  %}
+      
+      {%- comment -%} Chiude tag html <ul> precedentemente aperto {%- endcomment -%}
+      {% if count == totaleNumeroPostSenzaCategoria %}
+        </ul>
+      </div>
 
       {% endif %}
 
-    {% endfor %}
+    {% endif %}
+
+  {% endfor %}
 
   </div>
 

@@ -7,6 +7,15 @@ menu:
 seo: 
     title: Pagina con Sidebar
 sidebar: true
+menu:
+  top:					no # (yes | no - default: yes) 
+  bottom:			    no # (yes | no - default: yes) 
+  name: 
+seo: 
+    title: 
+# Add or exclude page from sitemap (yes | no - default: no)
+sitemap:
+  exclude: 			yes # (yes | no - default: no)
 ---
 # Mou
 

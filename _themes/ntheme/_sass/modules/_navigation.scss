@@ -1,76 +1,242 @@
+
+// Hide checkbox
+input[id=openmore-list-switcher]{
+  display: none;
+}
+
+.openmore{ 
+  color: #fff;
+  
+  position: relative;
+}
+
+.openmore-list ul {
+  display: none;
+}
+
+input[id=openmore-list-switcher]:checked ~ .openmore-list > ul {
+  display: inline;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 6px 7px 2px #e6e6e6;
+  width: 130px;
+  z-index: 10;
+  right: 0;
+}
+
+input[id=openmore-list-switcher]:checked ~ .openmore-list > ul > li > a {
+  color: #2f3036 !important;
+}
+
+.openmore-list-switcher {
+  cursor: pointer;
+}
+
+.openmore-list-switcher > svg {
+  fill: #fff;
+}
+
+.openmore-btn{
+  width: 16px;
+  height: 16px;
+  
+  line-height: 0;
+  display: inline-block;
+  padding: .85rem;
+  padding-left: .2rem;
+  position: relative;
+  top: 4px;
+}
+
+
+// Miniaturizza il logo quando il menù viene aperto nella frontpage 
+.layout-frontpage > input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > .logo {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+} 
+
+// Manage menù input beaviour in other page 
+// =============================================================================
+
+// Hide checkbox
+input[id=show-menu]{
+  display: none;
+}
+
+input[id=show-menu]:checked ~ .show-menu     { position: fixed; }
+
+
+
+@media (min-width: 0) and (max-width: 768px) {
+  //Show menu when invisible checkbox is checked
+  input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > #menu > ul{
+    display: block;
+    overflow: scroll;
+    max-width: 535px;
+    left: 0;
+    right: 0;
+    margin: auto;  
+  }
+}
+
+
+@media (min-width: 0) and (max-width: 768px) {
+  input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > #menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    margin-top: 3.1875rem;
+
+    -webkit-animation: fadein 400ms;
+       -moz-animation: fadein 400ms;
+         -o-animation: fadein 400ms;
+            animation: fadein 400ms;
+  }
+
+}
+
+input[id=show-menu]:checked ~ .layout-header {
+  position: fixed;
+  width: 100%;
+}
+
+@media (min-width: 0) and (max-width: 768px){
+
+  input[id=show-menu]:checked ~ .layout-main,
+  input[id=show-menu]:checked ~ .layout-footer { 
+    display: none; 
+  }
+
+
+}
+
+
+@media (min-width: 0) and (max-width: 768px) {
+  .btn-1 {
+    z-index: 1;
+    width: 54px;
+    overflow: hidden;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+}
+
+@media (min-width: 769px) {
+  .btn-1 {
+    display: none;
+  }
+}
+
+/* Da cencellare
+@media (min-width: 427px){
+  position: relative;
+  float: right;
+}
+*/
+
+.show-menu{
+  padding: 17px;
+  display: block;
+  cursor: pointer;
+}
+
+
+// Style 'show menu' label button and hide it by default
+.show-menu {
+    
+  > svg {
+      path { fill: #fff; }
+    }
+}
+
+/*
+@media (min-width: 0px)   and (max-width: 426px) {}
+@media (min-width: 427px) and (max-width: 768px) {}
+@media (min-width: 769px) and (max-width: 1280px) {}
+@media (min-width: 1281px) {}
+*/
+
+
+
 // Style for menu links
 #menu {
 
-        // Strip the ul of padding and list styling
-        > ul {
-            background: #f9f9f9;
-            display: none;
-            height: 100%;
-            left: 0;
-            list-style-type:none;
-            margin:0;
-            overflow: hidden;
-            position: fixed;
-            top: 3.2rem;
-            width: 100%;
-            z-index: 4;
+  @media (min-width: 0) and (max-width: 768px){
+  // Strip the ul of padding and list styling
+  > ul {
+      background: #f9f9f9;
+      display: none;
+      height: 100%;
+      left: 0;
+      list-style-type:none;
+      margin:0;
+      overflow: hidden;
+      position: fixed;
+      top: 3.2rem;
+      width: 100%;
+      z-index: 4;
 
-            // Create a horizontal list with spacing
-            > li{
+    // Create a horizontal list with spacing
+    > li{
 
-                > a {
-                    // text-decoration: none; 
-                    border-bottom: solid 1px #ddd;
-                    color: #828282;
-                    display: inline-block;
-                    // font-size: .95rem;
-                    font-weight: bold;
-                    line-height: 1rem;
-                    padding-bottom: 1.1rem; 
-                    padding-left: 5%; 
-                    padding-right: 5%; 
-                    padding-top: 1.1rem; 
-                    text-align: left;
-                    width: 90%;
-                    /*
-                    &:before {
-                        content: '♦';
-                        font-size: 2em;
-                        left: -.8em;
-                        position: relative;
-                        
-                        margin-right: -.7em;
-                    }
-                    */
-                }
-                // Hover state for top level links
-                &:hover {
-                    a {
-                        background: #ddd;                
-                    }
-                    // Style for dropdown links
-                    > ul {
-                        a {
-                            background: #f3f3f3;
-                            color: #2f3036;
-                            height: 40px;
-                            line-height: 40px;                        
-                        }
-                    }
-                }
-            } 
+        > a {
+            // text-decoration: none; 
+            border-bottom: solid 1px #ddd;
+            color: #828282;
+            display: inline-block;
+            // font-size: .95rem;
+            font-weight: bold;
+            line-height: 1rem;
+            padding-bottom: 1.1rem; 
+            padding-left: 5%; 
+            padding-right: 5%; 
+            padding-top: 1.1rem; 
+            text-align: left;
+            width: 90%;
+            /*
+            &:before {
+                content: '♦';
+                font-size: 2em;
+                left: -.8em;
+                position: relative;
+                
+                margin-right: -.7em;
+            }
+            */
         }
-
-    @include media-query(768px) {
-        float: right;
+        // Hover state for top level links
+        &:hover {
+            a {
+                background: #ddd;                
+            }
+            // Style for dropdown links
+            > ul {
+                a {
+                    background: #f3f3f3;
+                    color: #2f3036;
+                    height: 40px;
+                    line-height: 40px;                        
+                }
+            }
+        }
+      } 
+    }
+  }
+   
+  
+  
+  @media (min-width: 769px) {
+        
 
         ul {
-            background: none;
-            display: block;
             margin: 0;
-            padding: 0;
-            position: static; /* for ie */
-            width: auto;      /* for ie */
 
             li {
                 display: inline;
@@ -98,61 +264,5 @@
             }
 
         }
-    }
-}
-
-
-
-
-// Style 'show menu' label button and hide it by default
-.show-menu {
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    padding: 1.11rem;
-    line-height: 0;
-    display: none;
-    position: absolute;
-    right: .3rem;
-    z-index: 1;
-    
-    > svg {
-        width: 18px;
-        height: 15px;
-
-        path { fill: #fff; }
-    }
-
-}
-
-
-// Miniaturizza il logo quando il menù viene aperto nella frontpage 
-.layout-frontpage > input[id=show-menu]:checked ~ .layout-header > .layout-wrapper > .logo {
-    position: absolute;
-    top: 0;
-    left: 1rem;
-} 
-
-input[id=show-menu]:checked ~ .layout-header {
-    position: fixed;
-    width: 100%;
-}
-
-input[id=show-menu]:checked ~ .layout-main { display: none; }
-input[id=show-menu]:checked ~ .layout-footer  { display: none; }
-
-
-// Responsive Styles
-@media screen and (max-width : 425px){
-    // Make dropdown links appear inline
-    ul { }
-    // Create vertical spacing
-    li { margin-bottom: 1px; }
-    // Make all menu links full width
-    li a {  }
-    // Display 'show menu' link
-    .show-menu {
-        display:block;
-        position: fixed;
     }
 }

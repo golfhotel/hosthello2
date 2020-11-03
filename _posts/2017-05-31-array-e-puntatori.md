@@ -2,11 +2,16 @@
 title: Array e puntatori
 layout:     post
 date:       2017-05-27
-author:     Mr. Jim
+author:     Ivan
 categories: [linguaggio c]
-summary:    Un'introduzione su come array e puntatori lavorano tra loro.
-latest_posts:   yes
-featured:       no
+summary: Capire la funzione rand() con spiegazione e semplici esempi.   
+featured:
+  show: false
+  image: 
+  image_from_url: "https://images.unsplash.com/photo-1534690999400-b6aa76c07fa3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_alt: "Sono l'alt dell'immagine"
+  image_title: "Sono il title dell'immagine"
+sidebar: false 
 ---
 
 Di seguito un esempio sulla differenza d'uso su come gli array possono essere gestiti con l'uso di puntatori, a dimostrazione di come (array e puntatore) siano due elementi equivalenti tra loro. 

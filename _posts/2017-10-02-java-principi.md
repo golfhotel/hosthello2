@@ -1,10 +1,20 @@
 ---
-title: Note di Java.
+title: Note di Java
 summary: Informazioni e note sul linguaggio Java.
 date: 2016-08-23 14:00:00
 seo: 
   title:   Sviluppare in Java.
-  summary: foo bar baz
+  summary: 
+author: Ivan Garrini
+categories: [linguaggio c]
+featured:
+  show: false
+  image: ""
+  image_from_url: "https://images.unsplash.com/photo-1519163219899-21d2bb723b3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_alt: "Sono l'alt dell'immagine"
+  image_title: "Sono il title dell'immagine"
+sidebar: false 
+latest_posts:   yes
 ---
 
 Stralci informativi sulla programmazione e sul linguaggio Java, utili per chi vuole riprendere i concetti più importanti. Per approfondimenti sulla materia è riportato in calce il testo di riferimento. 

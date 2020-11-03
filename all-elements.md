@@ -6,6 +6,15 @@ menu:
   name: Small Page
 seo: 
     title: Small page
+menu:
+  top:					no # (yes | no - default: yes) 
+  bottom:			    no # (yes | no - default: yes) 
+  name: Blog
+seo: 
+    title: 
+# Add or exclude page from sitemap (yes | no - default: no)
+sitemap:
+  exclude: 			yes # (yes | no - default: no)
 
 
 ---

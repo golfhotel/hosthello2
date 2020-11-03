@@ -1,12 +1,17 @@
 
-<label for="show-menu" class="show-menu">
-  <svg viewBox="0 0 18 15">
-    <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-    <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-    <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-  </svg>
-</label>
+{% comment %}
+|--------------------------------------------------------------------------
+| NOTA IMPORTANTE TAG INPUT
+|--------------------------------------------------------------------------
+|
+|  Il Tag <input> deve essere posto IN CIMA a questo file per 
+|  permettere di attraversare il DOM, utili alle classi CSS.
+|
+{% endcomment  %}
+
 <input type="checkbox" id="show-menu" role="button">
+
+
 
 <header class="layout-header">
 
@@ -18,12 +23,29 @@
       </a><!-- .site-title -->
     </div><!-- .logo -->
     
-
+    <div class="btn-1">
+      <label for="show-menu" class="show-menu">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </label>    
+    </div>  
+    
+ 
+  
+    
+    {% assign MAX_LINK_IN_MENU = 6 %}
+    {% assign conteggioPagine = 0 %}
+    {% assign controlloTagUl = 0 %}
     <nav id="menu">
-        <ul>
-          {% for my_page in site.pages %}
-            {% if my_page.menu.top and my_page.title %}
-            <li>
+
+      <ul role="menu">
+        {% for my_page in site.pages %}
+
+          {% if my_page.menu.top and my_page.title and conteggioPagine <= MAX_LINK_IN_MENU %}
+            <li role="menuitem">
               <a  href="{{ my_page.url | prepend: site.url }}">
                 {% if my_page.menu.name %} 
                   {{ my_page.menu.name }} 
@@ -32,12 +54,58 @@
                 {% endif %}
               </a>
             </li>
+          {% endif %}
+
+
+          {% if my_page.menu.top and my_page.title and conteggioPagine > MAX_LINK_IN_MENU %}
+            
+            {% if controlloTagUl == 0 %}
+              <li class="openmore">
+                Altro
+                <input type="checkbox" id="openmore-list-switcher" role="button">
+                <div class="openmore-btn">
+                  <label for="openmore-list-switcher" class="openmore-list-switcher">
+                    <svg viewBox="0 0 451.847 451.847">
+                     <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                     c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                     c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                    </svg> 
+                  </label>
+                </div>
+                <div class="openmore-list">  
+                  <ul>  
             {% endif %}
-          {% endfor %}
-        </ul>
+
+            {% assign controlloTagUl = controlloTagUl | plus: 1 %} 
+            
+                    <li role="menuitem">
+                      <a  href="{{ my_page.url | prepend: site.url }}">
+                        {% if my_page.menu.name %} 
+                          {{ my_page.menu.name }} 
+                        {% else %}
+                          {{ my_page.title | escape }} 
+                        {% endif %}
+                      </a>
+                    </li>                                     
+
+            {% if controlloTagUl == site.pages.size %}
+                  </ul> 
+                </div> 
+              </li>
+            {% endif %}
+
+          {% endif %}
+            
+          {% assign conteggioPagine = conteggioPagine | plus: 1 %}
+          
+        {% endfor %}
+
+      </ul>
+      {%- comment -%} Unset variabile {%- endcomment -%}
+      {% assign conteggioPagine = nil %}
+      {% assign controlloTagUl = nil %}
+      
     </nav>
-
-
 
     {% if page.layout == 'frontpage' %}
     <div class="frontpage-title">
@@ -51,6 +119,16 @@
 </header><!-- .layout-header -->
 
 
+
+{% comment %}
+|--------------------------------------------------------------------------
+| VISUALIZZA INFO L'AMBIENTE DEV È ABILITATO
+|--------------------------------------------------------------------------
+|
+|  Quando jekyll lavora in ambiente development (quindi non produzione)
+|  viene visualizzato un messaggio per ricordarlo.
+|
+{% endcomment  %}
 
 {% if jekyll.environment != "production" %}
 <div class="env-dev">
@@ -81,10 +159,14 @@
     padding-left: 20px;
     letter-spacing: 2px;     
   }
+
+
   .env-dev:hover > span  {
     display: inline;
    
   }
+
+
   .env-dev::before{
     content: '⦿';
     position: fixed;

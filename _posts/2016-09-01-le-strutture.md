@@ -1,8 +1,16 @@
 ---
 title: Le strutture 
 layout: post
+author:   Ivan
+categories: [linguaggio c]
+summary:    
 featured:
-  show: yes
+  show: true
+  image: ""
+  image_from_url: "https://images.unsplash.com/photo-1493476523860-a6de6ce1b0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_alt: "Sono l'alt dell'immagine"
+  image_title: "Sono il title dell'immagine"
+sidebar: false
 ---
 
 1. [Definire una struttura](#definire-una-struttura)
@@ -123,6 +131,8 @@ struct date today = { .day = 25, .month = 5, .year = 2016 };
 ```
 
 Nota che una struttura è diversa da un'array (un array accetta elementi dello stesso tipo)!
+
+![alt text](https://images.unsplash.com/photo-1555883006-37d106604feb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70 "Logo Title Text 1")
 
 Di una variabile di tipo struttura posso usare un elemento della struttura come una comune variabile comune e fare qualcosa come 
 

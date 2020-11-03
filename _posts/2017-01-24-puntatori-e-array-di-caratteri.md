@@ -2,8 +2,17 @@
 layout: post
 title:  Puntatori e array di caratteri
 date:   2017-01-24
+author: Ivan Garrini
 categories: [linguaggio c]
 summary: Note sulla distinzione tra puntatori a caratteri e array di caratteri.  
+featured:
+  show: false
+  image: ""
+  image_from_url: "https://images.unsplash.com/photo-1602428142651-12dc685c73b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_alt: "Sono l'alt dell'immagine"
+  image_title: "Sono il title dell'immagine"
+sidebar: false 
+
 ---
 
 Un *puntatore ad array* è comunemente usato nelle stringhe, ovvero negli array di caratteri: quando si parla di stringhe, si parla quindi di **puntatore ad array di caratteri**.

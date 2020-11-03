@@ -6,8 +6,10 @@ author:
 summary: Analisi del comportamento tra due funzioni e la memoria STACK. Ovvero come una funzione andrà ad influenzare il comportamento di una seconda funzione.
 featured:
   image: 
-  image_from_url: https://cdn1.iconfinder.com/data/icons/nature-camping/32/evergreen-forest-512.png
+  image_from_url: https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70
 ---
+
+![Funzioni e memoria stack](https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80 "Funzioni e memoria stack")
 
 Analizziamo il codice sotto e arriveremo a capire come una funzione, che non rispetta alcuni accorgimenti, generi un output inaspettato.  
 

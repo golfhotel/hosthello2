@@ -148,12 +148,14 @@
 .is-fixed{ 
     @media (min-width: 769px){
         flex: auto;
+        width: 680px; /* OLD IE */
         max-width: 680px;
         margin-left: auto ;
         margin-right: auto ;
     }
 
 }
+
 
 
 

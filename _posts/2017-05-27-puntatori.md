@@ -1,24 +1,18 @@
 ---
-title: 		Puntatori
+title: 		Puntatori e variabili
 layout: 	post
 date:   	2017-05-27
-author: 	Mr. Jim
+author: Ivan Garrini
+summary: I puntatori sono la base per capire come nella programmazione è usata la memoria.
 categories: [linguaggio c]
-summary:  
-# Permalink:
-add_to_top_menu: 	no
-add_to_bottom_menu: no
-section:
-  blackquote: 	Sviluppare progetti web con le tecnologie più potenti è la base di un prodotto vincente e duraturo 
-  cite: 	  	Foo Barbaz
-  link:		  	www.google.it
-seo:
-  title: 		This is SEO title
-  keywords: 	uno, due, tre
-# sitemap:
-#	exclude: yes
-latest_posts: 	yes
-featured: 		no
+featured:
+  show: false
+  image: ""
+  image_from_url: "https://images.unsplash.com/photo-1597848007618-54db4e82fe3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_alt: "Sono l'alt dell'immagine"
+  image_title: "Sono il title dell'immagine"
+sidebar: false 
+latest_posts:   yes
 ---
 
 Un puntatore è come una normale variabile ma con un "potere" in più. Esso infatti non contiene dati in modo esplicito, ma **contiene l'indirizzo di memoria** di un'altra variabile. 
