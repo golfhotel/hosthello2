@@ -3,7 +3,7 @@ title: Tutte le categorie
 layout: melegolden
 summary: Trova la categoria di tuo interesse e consulta i suoi post
 menu:
-  name: Category
+  name: Categorie
 seo: 
     title: Post per categoria
 ---

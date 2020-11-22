@@ -22,7 +22,7 @@ description: >  # this means to ignore newlines
 
 # usato quando si lancia il comando "JEKYLL_ENV=production jekyll serve --host=[ip-address]"
 # url: "https://7350a70d.ngrok.io"
-url: "https://golfhotel.github.io/hosthello2"  # the base hostname & protocol for your site
+url: "https://www.hosthello.com"  # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # social informations

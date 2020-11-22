@@ -3,19 +3,17 @@ title: Che cos'è il nucleo della rete
 layout: post
 author:   Ivan
 categories: [networking]
-summary: La rete è una fitta maglia di elementi. Scopriamo il nucleo.
+summary: La rete è una fitta maglia di elementi. Scopriamone il nucleo.
 featured:
-  show: false
+  show: true
   image: ""
   image_from_url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
-  image_alt: "Sono l'alt dell'immagine"
-  image_title: "Sono il title dell'immagine"
+  image_alt: "Il nucleo della rete"
+  image_title: "Il nucleo della rete"
 sidebar: false
 ---
 
 In [precedenza](la-rete-di-accesso "Articolo sulla rete di accesso") si è trattata la parte *periferica* della rete internet. Ora vediamo la parte interna denominata *nucleo*: qui si hanno i dispositivi che permettono lo scambio dei messaggi tra vari host appartenenti alla stessa rete e o a *reti differenti*. 
-
-![nucleo-della-rete](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1791&q=80 "nucleo-della-rete.jpg")
 
 ### Store-and-forward
 

@@ -5,7 +5,7 @@ author:   Ivan
 categories: [sistemi operativi]
 summary: È un mostro nascosto. Scopri come funziona e previeni il Deadlock.
 featured:
-  show: true
+  show: false
   image: ""
   image_from_url: "https://images.unsplash.com/photo-1509558741973-0cd2f6a12a4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
   image_alt: "Sono l'alt dell'immagine"

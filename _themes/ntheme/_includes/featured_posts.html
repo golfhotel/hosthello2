@@ -9,28 +9,27 @@
             {% assign count_all = 0 %}
             
             {% for post in site.posts %}
-
-            {% if post.featured.show %}
-                {% assign count_all = count_all | plus: 1 %}
-            {% endif %}
-
+                {% if post.featured.show %}
+                    {% assign count_all = count_all | plus: 1 %}
+                {% endif %}
             {% endfor %}
 
 
             {% assign counter = 0 %}
             {% assign statuslast = false %}
-            
             {% for post in site.posts %}
 
-            {% if post.featured.show %}
-                {% assign counter = counter | plus: 1 %}
+                {% if post.featured.show %}
+                    {% assign counter = counter | plus: 1 %}
 
-                {% if counter == count_all %}
-                {% assign statuslast = true %}
+                    {% if counter == count_all %}
+                        {% assign statuslast = true %}
+                    {% endif %}
+
+                    {% include posts.html length = count_all 
+                                        cardinal = counter 
+                                        lastpost = statuslast %}
                 {% endif %}
-
-                {% include posts.html length=count_all cardinal=counter lastpost=statuslast %}
-            {% endif %}
                 
             {% endfor %} 
             {% assign counter = nil %}
@@ -39,4 +38,4 @@
         </ul>
     </div>
 </div>
-    <!-- Kooo -->
+<!-- Kooo -->

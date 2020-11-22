@@ -12,16 +12,18 @@ Questo è un file di layout.
     
     <div class="layout-wrapper">
     
-    
+    {% include snippet_preview.html %}
+
     <div> 
 
         <article >
 
             {% include page-title.html %}
 
-            {% include featured_posts.html %}
+            {% include featured_posts.html %}            
             
             <hr class="before-posts-sort-by-date">
+
             {% include all_posts_sort_by_date.html %}
     
         </article>

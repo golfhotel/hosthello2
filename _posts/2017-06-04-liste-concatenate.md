@@ -4,11 +4,11 @@ layout: post
 date: 2020-01-03
 author: Ivan Garrini
 categories: [linguaggio c]
-summary: Come settare un corretto ambiente di sviluppo.  
+summary: Le liste di elementi spiegate nell'ambito della programmazione.  
 featured:
-  show: false
+  show: true
   image: ""
-  image_from_url: "https://images.unsplash.com/photo-1587287720754-94bac45f0bff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
+  image_from_url: "https://images.unsplash.com/photo-1576843018966-8c9e0d9d64cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
   image_alt: "Sono l'alt dell'immagine"
   image_title: "Sono il title dell'immagine"
 sidebar: false 

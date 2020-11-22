@@ -5,9 +5,13 @@
         {% for post in site.posts %}
         {% assign number=forloop.index %}    
         
-        {% comment %} Ad ogni ciclo, al file viene passata la quantità totale dei post, 
-        la cardinalità di ogni post e se si tratta dell'ultimo post. {% endcomment %}
-        {% include posts.html length=forloop.length cardinal=number lastpost=forloop.last %}
+        {% comment %} Ad ogni ciclo, richiamo posts.html e gli passo  
+        - la quantità totale dei post, 
+        - la cardinalità di ogni post e 
+        - se si tratta dell'ultimo post. {% endcomment %}
+        {% include posts.html length = forloop.length 
+                            cardinal = number 
+                            lastpost = forloop.last %}
     
         {% endfor %}  
     </ul>

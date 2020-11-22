@@ -5,7 +5,7 @@ author:   Ivan
 categories: [linguaggio c]
 summary:    
 featured:
-  show: true
+  show: false
   image: ""
   image_from_url: "https://images.unsplash.com/photo-1493476523860-a6de6ce1b0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=630&q=70"
   image_alt: "Sono l'alt dell'immagine"

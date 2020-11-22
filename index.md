@@ -1,7 +1,7 @@
 ---
 title: 					Sviluppo web e pillole di programmazione
 layout: 				blog
-summary:                Articoli e informazioni per sviluppatori
+summary:                Articoli ed informazioni per sviluppatori sempre freschi.
 permalink:
 menu: 		
   top:					no # (yes | no - default: yes) 
@@ -12,8 +12,9 @@ section:				    # Work only with "layout: frontpage" (text - default: ignore)
   cite: 				Foo Barbaz
   link: 				www.google.it
 seo:
-  title: 				Web development and programming pills
-  keywords: 			uno, due, tre
+  title: 				
+  keywords: 			sviluppo web, programmazione, articoli
+  description: foo
 # Add or exclude page from sitemap (yes | no - default: no)
 # sitemap:
 #	exclude: 			yes # (yes | no - default: no)

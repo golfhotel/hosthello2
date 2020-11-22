@@ -42,29 +42,29 @@ Quando posts.html non riceve i parametri, la classe è small.
 
 
 {% comment %}
-Assegna classe specifica a singolo post.
+Assegna classe css specifica a singolo post.
 
 @param include.length   : numero intero. Totale dei post presenti nella lista posts.
 @param include.cardinal : numero intero. Posizione nella lista  
-@param include.lastpost : true o false. Identifica se il il post è l'ultimo.
+@param include.lastpost : true o false. Identifica se il post è l'ultimo.
 
 Il codice sottostante assegna una classe ad ogni singolo post
 in modo da avere una diposizione uniforme ed il controllo dell'ultimo post.
 
-Esempio di disposizione quando i posts sono in numero pari.
+Esempio di disposizione quando i posts sono in numero PARI.
 |--------- Giant ---------|
 |---- Big ----|-- small --|
 |-- small --|---- Big ----|
 |---- Big ----|-- small --|
 |--------- Giant ---------|
 
-Esempio di disposizione quando i posts sono in numero dispari.
+Esempio di disposizione quando i posts sono in numero DISPARI.
 |--------- Giant ---------|
 |---- Big ----|-- small --|
 |-- small --|---- Big ----|
 |---- Big ----|-- small --|
 
-Questo metodo è utile per evitare la seguente disposizione.
+Questo metodo è utile per EVITARE la seguente disposizione.
 |---------- Giant --------|
 |---- Big ----|-- small --|
 |-- small --|---- Big ----|
@@ -97,15 +97,15 @@ Questo metodo è utile per evitare la seguente disposizione.
     {% assign dimension = "small" %}
 
   {% comment %} Esistono oltre tre post ed il post trattato è il primo {% endcomment %}
-  {% elsif include.length > 3 and include.cardinal == 1 %}     
+  {% elsif include.length > 2 and include.cardinal == 1 %}     
     {% assign dimension = "giant" %}
-  {% elsif include.length > 3 and multipleof4 == 0 %}   
+  {% elsif include.length > 2 and multipleof4 == 0 %}   
     {% assign dimension = "small" %}
-  {% elsif include.length > 3 and multipleof4 == 1 %}   
+  {% elsif include.length > 2 and multipleof4 == 1 %}   
     {% assign dimension = "big" %}
-  {% elsif include.length > 3 and multipleof4 == 2 %}   
+  {% elsif include.length > 2 and multipleof4 == 2 %}   
     {% assign dimension = "big" %}
-  {% elsif include.length > 3 and multipleof4 == 3 %}   
+  {% elsif include.length > 2 and multipleof4 == 3 %}   
     {% assign dimension = "small" %}    
   {% endif %}
 
