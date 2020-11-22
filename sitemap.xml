@@ -9,6 +9,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -48,10 +50,58 @@
   
     
       <url>
+        <loc>/posts/il-nucleo-della-rete</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/la-rete-di-accesso" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-deadlock" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/liste-concatenate" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/sommare-un-numero-con-i-suoi-successivi-in-modo-posizionale" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/note-di-programmazione-base" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/array-e-puntatori" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/puntatori" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/markdown-preview-in-sublimetext-con-livereload" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/how-rand-function-works" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/puntatori-e-array-di-caratteri" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/le-strutture" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
+        
+        <lastmod>2020-08-25T00:00:00+02:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
         <loc>/posts/cosa-e-il-nucleo-della-rete</loc>
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
@@ -97,6 +147,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -140,6 +192,8 @@
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
@@ -185,6 +239,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -228,6 +284,8 @@
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
@@ -273,6 +331,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -316,6 +376,8 @@
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
@@ -361,6 +423,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -404,6 +468,8 @@
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
@@ -449,6 +515,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -492,6 +560,8 @@
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
@@ -537,6 +607,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -580,6 +652,8 @@
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
@@ -625,6 +699,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -669,6 +745,8 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
@@ -712,6 +790,8 @@
         
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
