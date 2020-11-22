@@ -4,10 +4,12 @@
   
     
       <url>
-        <loc>/posts/il-nucleo-della-rete</loc>
+        <loc>/posts/funzioni-e-memoria-stack</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -37,7 +39,49 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
+        
+        <lastmod>2020-11-18T13:00:00+01:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/posts/cosa-e-il-nucleo-della-rete</loc>
+        
+        
           <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/la-rete-di-accesso" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-deadlock" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/liste-concatenate" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/sommare-un-numero-con-i-suoi-successivi-in-modo-posizionale" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/note-di-programmazione-base" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/array-e-puntatori" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/puntatori" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/markdown-preview-in-sublimetext-con-livereload" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/how-rand-function-works" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/puntatori-e-array-di-caratteri" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/le-strutture" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -51,7 +95,9 @@
         <loc>/posts/note-su-come-funziona-un-sistema-operativo</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -80,8 +126,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -95,7 +139,9 @@
         <loc>/posts/la-rete-di-accesso</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -124,8 +170,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -139,7 +183,9 @@
         <loc>/posts/cosa-e-il-deadlock</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -168,8 +214,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -183,7 +227,9 @@
         <loc>/posts/liste-concatenate</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -212,8 +258,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -227,7 +271,9 @@
         <loc>/posts/sommare-un-numero-con-i-suoi-successivi-in-modo-posizionale</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -256,8 +302,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -271,7 +315,9 @@
         <loc>/posts/note-di-programmazione-base</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -300,8 +346,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -315,7 +359,9 @@
         <loc>/posts/array-e-puntatori</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -344,8 +390,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -359,7 +403,9 @@
         <loc>/posts/puntatori</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -388,8 +434,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -403,7 +447,9 @@
         <loc>/posts/markdown-preview-in-sublimetext-con-livereload</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -432,8 +478,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -447,7 +491,9 @@
         <loc>/posts/how-rand-function-works</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -476,8 +522,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -491,7 +535,9 @@
         <loc>/posts/puntatori-e-array-di-caratteri</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -520,8 +566,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -535,7 +579,9 @@
         <loc>/posts/le-strutture</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -564,8 +610,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -579,7 +623,9 @@
         <loc>/posts/const-and-scanf</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -608,8 +654,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -623,7 +667,9 @@
         <loc>/posts/java-principi</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -652,52 +698,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
-        
-        <lastmod>2016-08-23T16:00:00+02:00</lastmod>
-        <changefreq>weekly</changefreq>
-      </url>
-    
-  
-    
-      <url>
-        <loc>/posts/funzioni-e-memoria-stack</loc>
-        
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/la-rete-di-accesso" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-deadlock" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/liste-concatenate" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/sommare-un-numero-con-i-suoi-successivi-in-modo-posizionale" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/note-di-programmazione-base" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/array-e-puntatori" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/puntatori" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/markdown-preview-in-sublimetext-con-livereload" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/how-rand-function-works" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/puntatori-e-array-di-caratteri" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/le-strutture" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -711,7 +711,9 @@
         <loc>/posts/gestire-le-stringhe-con-getchar</loc>
         
         
-          <xhtml:link rel="alternate" hreflang="" href="/posts/il-nucleo-della-rete" />
+          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/posts/cosa-e-il-nucleo-della-rete" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/note-su-come-funziona-un-sistema-operativo" />
         
@@ -740,8 +742,6 @@
           <xhtml:link rel="alternate" hreflang="" href="/posts/const-and-scanf" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/java-principi" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/posts/funzioni-e-memoria-stack" />
         
           <xhtml:link rel="alternate" hreflang="" href="/posts/gestire-le-stringhe-con-getchar" />
         
@@ -759,58 +759,19 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
           <xhtml:link rel="alternate" hreflang="" href="/blog" />
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/markdown" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/xml-sitemap.xsl" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/assets/style.css" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/category/linguaggio-c/" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/category/enviroment/" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/category/sistemi-operativi/" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/category/networking/" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
-        
-        <changefreq>weekly</changefreq>
-      </url>
-      
-    
-  
-    
-      
-      <url>
-        <loc>/about</loc>
-        
-        
-          <xhtml:link rel="alternate" hreflang="" href="/404" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/blog" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/category" />
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
         
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -849,7 +810,48 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
+          <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/blog" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/xml-sitemap.xsl" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/linguaggio-c/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/enviroment/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/sistemi-operativi/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/networking/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+      
+    
+  
+    
+      
+      <url>
+        <loc>/chi-siamo</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/404" />
         
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
@@ -857,9 +859,13 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -890,17 +896,19 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
           <xhtml:link rel="alternate" hreflang="" href="/blog" />
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -930,12 +938,10 @@
     
       
       <url>
-        <loc>/sitemap.xml</loc>
+        <loc>/robots.txt</loc>
         
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
-        
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
         
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
@@ -943,9 +949,56 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/xml-sitemap.xsl" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/assets/style.css" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/linguaggio-c/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/enviroment/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/sistemi-operativi/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category/networking/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/feed.xml" />
+        
+        <changefreq>weekly</changefreq>
+      </url>
+      
+    
+  
+    
+      
+      <url>
+        <loc>/sitemap.xml</loc>
+        
+        
+          <xhtml:link rel="alternate" hreflang="" href="/404" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/blog" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/category" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -984,17 +1037,19 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
           <xhtml:link rel="alternate" hreflang="" href="/blog" />
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -1025,17 +1080,19 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
           <xhtml:link rel="alternate" hreflang="" href="/blog" />
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -1066,17 +1123,19 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
           <xhtml:link rel="alternate" hreflang="" href="/blog" />
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -1107,17 +1166,19 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
           <xhtml:link rel="alternate" hreflang="" href="/blog" />
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
@@ -1148,17 +1209,19 @@
         
           <xhtml:link rel="alternate" hreflang="" href="/404" />
         
-          <xhtml:link rel="alternate" hreflang="" href="/about" />
-        
           <xhtml:link rel="alternate" hreflang="" href="/all-elements" />
         
           <xhtml:link rel="alternate" hreflang="" href="/blog" />
         
           <xhtml:link rel="alternate" hreflang="" href="/category" />
         
+          <xhtml:link rel="alternate" hreflang="" href="/chi-siamo" />
+        
           <xhtml:link rel="alternate" hreflang="" href="/" />
         
           <xhtml:link rel="alternate" hreflang="" href="/markdown" />
+        
+          <xhtml:link rel="alternate" hreflang="" href="/robots.txt" />
         
           <xhtml:link rel="alternate" hreflang="" href="/sitemap.xml" />
         
