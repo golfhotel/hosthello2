@@ -44,6 +44,7 @@ permalink:         /:collection/:title
 # Necessaria per il corretto funzionamento del tema.
 # --------------------------------------------------
 theme: ntheme
+timezone: Europe/Rome
 
 # https://github.com/jekyll/jekyll-archives
 plugins:

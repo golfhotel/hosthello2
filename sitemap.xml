@@ -6,28 +6,34 @@ permalink: /sitemap.xml
 <?xml-stylesheet type="text/xsl" href="xml-sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {% for post in site.posts %}
+  {% comment %}https://stackoverflow.com/questions/56631095/is-there-a-way-in-jekyll-to-retrieve-the-number-of-pictures-in-a-posts-content {% endcomment %}
+    {% assign postPics = post.content | split: '<img' | size | minus:1 %}
     {% if post.id contains "404" %}{% else %}
       <url>
-        <loc>{{site.base}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ post.url }}</loc>
+        <loc>{{site.url}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ post.url }}</loc>
         {% assign versions=site.posts | where:"ref", post.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.url}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ version.url }}" />
         {% endfor %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
+        <image>{{ postPics }}</image>                
+        <lastmod>{{ post.date | date_to_xmlschema }} {{ amountofimages }}</lastmod>
       </url>
     {% endif %}
   {% endfor %}
+
   {% for page in site.pages %}
+    {% assign pagePics = page.content | split: '<img' | size | minus:1 %}  
+    {% if pagePics < 0 %} {% assign pagePics = 0 %} {% endif %}
     {% if page.id contains "404" %}{% else %}
       {% unless page.sitemap.exclude == true %}
       <url>
-        <loc>{{site.base}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ page.url }}</loc>
+        <loc>{{site.url}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ page.url }}</loc>
         {% assign versions=site.pages | where:"ref", page.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.url}}{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ version.url }}" />
         {% endfor %}
-        <changefreq>weekly</changefreq>
+        <image>{{ pagePics }}</image>
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
       </url>
       {% endunless %}
     {% endif %}

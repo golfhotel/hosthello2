@@ -1,6 +1,7 @@
 ---
 title: 					Sviluppo web e pillole di programmazione
 layout: 				blog
+date: 2020-12-01 10:27:00
 summary:                Articoli ed informazioni per sviluppatori sempre freschi.
 permalink:
 menu: 		

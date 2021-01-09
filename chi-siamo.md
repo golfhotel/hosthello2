@@ -1,6 +1,7 @@
 ---
 title: Chi siamo
 layout: page-sidebar
+date: 2016-08-10 09:00:00
 summary: "Brevi informazioni sul team di Hosthello e sul pubblico a cui si rivolge."
 menu: 
   name: Chi siamo
