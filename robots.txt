@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.hosthello.com/sitemap.xml
+Sitemap: http://192.168.10.10:4000/sitemap.xml

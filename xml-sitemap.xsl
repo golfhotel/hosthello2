@@ -84,9 +84,9 @@
 					<table id="sitemap" cellpadding="3">
 						<thead>
 							<tr>
-								<th width="70%">URL</th>								
+								<th width="80%">URL</th>								
 								<th width="5%">Images</th>								
-								<th width="12%">Last Change</th>
+								<th width="15%">Last Change</th>
 							</tr>
 						</thead>
 						<tbody>
